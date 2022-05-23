@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: monospace;
+}
+:root {
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+#root {
+  height: inherit;
+  width: inherit;
+}
