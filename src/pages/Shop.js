@@ -9,19 +9,29 @@ const Shop = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setItems(data.data.items.filter((item) => item.name !== "TBD"));
+        setItems(
+          data.data.items.filter(
+            (item) =>
+              item.name !== "TBD" &&
+              ["backpack", "pickaxe", "glider"].includes(item.type.value)
+          )
+        );
       });
   }, []);
 
   return (
-    <section>
-      <h2>Shop</h2>
+    <section className="Shop">
       {items.map((item) => {
         return (
-          <div key={item.id}>
-            <img src={item.images.smallIcon} />
-            <Link to={`/shop/${item.id}`}>{item.name}</Link>
-          </div>
+          <Link to={`/shop/${item.id}`} className="ItemCard__info__link">
+            <div key={item.id} className="ItemCard">
+              <img className="ItemCard__image" src={item.images.icon} />
+              <div className="ItemCard__info">
+                <h3 className="ItemCard__info__name">{item.name}</h3>
+                <p className="ItemCard__info__type">{item.type.value}</p>
+              </div>
+            </div>
+          </Link>
         );
       })}
     </section>
