@@ -1,17 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="Navbar">
       <ul className="Navbar__list">
-        <Link to="/" className="Navbar__item">
+        <NavLink
+          to="/"
+          // TODO active is already in use add better solution
+          className={({ isActive }) =>
+            isActive ? "Navbar__item active" : "Navbar__item"
+          }
+        >
           Home
-        </Link>
-        <Link to="/shop" className="Navbar__item">
+        </NavLink>
+        <NavLink
+          to="/shop"
+          className={({ isActive }) =>
+            isActive ? "Navbar__item active" : "Navbar__item"
+          }
+        >
           shop
-        </Link>
+        </NavLink>
       </ul>
     </nav>
   );

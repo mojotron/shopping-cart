@@ -21,3 +21,6 @@ body {
   height: inherit;
   width: inherit;
 }
+.active {
+  opacity: 0.5;
+}
