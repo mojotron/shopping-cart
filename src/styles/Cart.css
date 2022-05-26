@@ -1,0 +1,14 @@
+.Cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Cart__headings {
+  font-size: 3.5rem;
+  padding-bottom: 3rem;
+}
+.Cart__total {
+  padding: 3rem 0;
+  font-size: 3rem;
+}

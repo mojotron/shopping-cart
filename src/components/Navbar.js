@@ -1,8 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
+import CartLink from "./CartLink";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <nav className="Navbar">
       <ul className="Navbar__list">
@@ -24,6 +25,8 @@ const Navbar = () => {
           shop
         </NavLink>
       </ul>
+
+      <CartLink cartLength={props.cartLength} />
     </nav>
   );
 };

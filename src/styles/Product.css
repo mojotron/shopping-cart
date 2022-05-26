@@ -1,0 +1,7 @@
+.Product {
+  border: 1px solid black;
+  height: 90vh;
+  background-position: center center;
+  background-size: 500px;
+  background-repeat: no-repeat;
+}

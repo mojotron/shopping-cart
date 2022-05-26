@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-const Layout = () => {
+const Layout = (props) => {
   return (
     <>
-      <Navbar />
-      <section>
+      <Navbar cartLength={props.cartLength} />
+      <section className="layout-wrapper">
         <Outlet />
       </section>
     </>

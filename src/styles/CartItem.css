@@ -1,0 +1,18 @@
+.CartItem {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50rem;
+  /*TEMP*/
+  font-size: 2rem;
+}
+.CartItem__icon {
+  height: 15rem;
+}
+.CartItem__info {
+}
+.CartItem__quantity {
+  display: flex;
+  align-items: center;
+}
