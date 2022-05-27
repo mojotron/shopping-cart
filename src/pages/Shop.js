@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import ItemCard from "../components/ItemCard";
+import LoadingSpinner from "../components/LoadingSpinner";
 
-const Shop = (props) => {
-  const [items, setItems] = useState([]);
+const Shop = () => {
+  const [items, setItems] = useState(null);
 
   useEffect(() => {
     fetch(`https://fortnite-api.com/v2/cosmetics/br/new`)
@@ -19,24 +20,12 @@ const Shop = (props) => {
       });
   }, []);
 
+  if (items === null) return <LoadingSpinner />;
+
   return (
     <section className="Shop">
       {items.map((item) => {
-        return (
-          <Link
-            key={item.id}
-            to={`/shop/${item.id}`}
-            className="ItemCard__info__link"
-          >
-            <div className="ItemCard">
-              <img className="ItemCard__image" src={item.images.icon} />
-              <div className="ItemCard__info">
-                <h3 className="ItemCard__info__name">{item.name}</h3>
-                <p className="ItemCard__info__type">{item.type.value}</p>
-              </div>
-            </div>
-          </Link>
-        );
+        return <ItemCard key={item.id} data={item} />;
       })}
     </section>
   );

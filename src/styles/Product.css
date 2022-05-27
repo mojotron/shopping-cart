@@ -1,7 +1,61 @@
 .Product {
-  border: 1px solid black;
-  height: 90vh;
-  background-position: center center;
-  background-size: 500px;
-  background-repeat: no-repeat;
+  height: 50rem;
+  width: 35rem;
+  background: linear-gradient(35deg, #141e30, #31557e);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border-radius: 0.5rem;
 }
+
+.Product__image {
+  width: 100%;
+  position: relative;
+  bottom: 5rem;
+  pointer-events: none;
+}
+.Product__info {
+  z-index: 10;
+  position: relative;
+  bottom: 13rem;
+  padding: 0 3rem 3rem;
+}
+.Product__info__heading {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  padding-bottom: 1.5rem;
+}
+.Product__info__price {
+  font-size: 1.9rem;
+  padding: 1rem 0 1rem;
+}
+.Product__info > p {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.Product__info__control {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+/* 
+.ItemCard__info {
+  position: relative;
+  bottom: 10rem;
+  padding: 1rem;
+  z-index: 10;
+}
+.ItemCard__info__name {
+  font-size: 2rem;
+}
+.ItemCard__info__type {
+  font-size: 1.7rem;
+  margin-top: 1rem;
+}
+.ItemCard__info__link {
+  display: block;
+}
+.layout-wrapper {
+  padding: 10rem 5rem;
+} */

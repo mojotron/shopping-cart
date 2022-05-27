@@ -10,6 +10,7 @@ const CartItem = (props) => {
 
         <div className="CartItem__quantity">
           <button
+            className="btn btn--update-quantity"
             onClick={props.handleDecrementItemQuantity}
             data-id={props.data.id}
           >
@@ -17,6 +18,7 @@ const CartItem = (props) => {
           </button>
           <p>{props.data.quantity}</p>
           <button
+            className="btn btn--update-quantity"
             onClick={props.handleIncrementItemQuantity}
             data-id={props.data.id}
           >
