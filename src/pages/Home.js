@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "../styles/Home.css";
 
 const Home = () => {
   return (
-    <section>
-      <h1>Home page</h1>
-      <Link to="/shop">Shop</Link>
+    <section className="Home">
+      <div className="Home__headings">
+        <h2>explore the shop for</h2>
+        <h1>new fortnite goodies</h1>
+      </div>
     </section>
   );
 };

@@ -1,0 +1,23 @@
+.Home {
+  position: relative;
+  margin: -10rem;
+  height: 90vh;
+  width: 100vw;
+  background-image: url("../images/WallpaperDog-6356.jpg");
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Home__headings {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  color: white;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  margin: 5rem;
+}
+.Home__headings > h2 {
+  font-size: 2rem;
+}

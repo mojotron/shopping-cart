@@ -4,6 +4,7 @@ const CartItem = (props) => {
   return (
     <div className="CartItem">
       <img className="CartItem__icon" src={props.data.image} alt="" />
+
       <div className="CartItem__info">
         <h3>{props.data.name}</h3>
         <p>{props.data.type}</p>
