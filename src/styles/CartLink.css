@@ -5,6 +5,10 @@
   margin-right: 3rem;
   color: white;
   text-decoration: none;
+  opacity: 0.5;
+}
+.CartLink.active {
+  opacity: 1;
 }
 
 .CartLink__icon {
@@ -26,5 +30,4 @@
   right: 3rem;
   line-height: 1rem;
   padding: 0.5rem 0 0;
-  border: 1px solid black;
 }

@@ -23,10 +23,6 @@ body {
   height: inherit;
   width: inherit;
 }
-.active {
-  opacity: 0.5;
-}
-
 .Shop {
   display: flex;
   flex-wrap: wrap;

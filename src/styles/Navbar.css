@@ -16,10 +16,14 @@
   align-items: center;
   height: 100%;
   color: white;
+  opacity: 0.5;
   text-decoration: none;
   font-size: 2rem;
   cursor: pointer;
   transition: background-color 500ms ease-in-out;
+}
+.Navbar__item.active {
+  opacity: 1;
 }
 .Navbar__item:hover {
   color: rgb(56, 65, 65);
