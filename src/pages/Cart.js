@@ -14,7 +14,9 @@ const Cart = (props) => {
         />
       ))}
 
-      <p className="Cart__total">Total: ${props.total.toFixed(2)}</p>
+      <p title="total-amount" className="Cart__total">
+        Total: ${props.total}
+      </p>
       <button className="btn">Purchase</button>
     </div>
   );

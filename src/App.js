@@ -79,10 +79,9 @@ function App() {
               <ProtectedRoute>
                 <Cart
                   items={cartItems}
-                  total={cartItems.reduce(
-                    (sum, ele) => sum + ele.price * ele.quantity,
-                    0
-                  )}
+                  total={cartItems
+                    .reduce((sum, ele) => sum + ele.price * ele.quantity, 0)
+                    .toFixed(2)}
                   handleIncrementItemQuantity={handleIncrementItemQuantity}
                   handleDecrementItemQuantity={handleDecrementItemQuantity}
                 />

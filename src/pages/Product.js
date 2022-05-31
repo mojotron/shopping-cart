@@ -33,6 +33,7 @@ const Product = (props) => {
   }, []);
 
   if (!itemInfo) return <LoadingSpinner />;
+
   return (
     <div className="Product">
       <img className="Product__image" src={itemInfo.image} />

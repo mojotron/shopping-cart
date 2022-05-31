@@ -5,7 +5,7 @@ import "../styles/CartLink.css";
 const CartLink = (props) => {
   return (
     <NavLink to="/cart" className="CartLink">
-      <img src={cartIcon} className="CartLink__icon" />
+      <img src={cartIcon} className="CartLink__icon" alt="shopping cart icon" />
       {props.cartLength > 0 && (
         <div className="CartLink__counter" data-testid="cart-item-counter">
           {props.cartLength}
