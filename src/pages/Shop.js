@@ -2,33 +2,47 @@ import React, { useEffect, useState } from "react";
 import ItemCard from "../components/ItemCard";
 import LoadingSpinner from "../components/LoadingSpinner";
 
+const Temp = (props) => {
+  console.log("temp", props);
+  return (
+    <>
+      {props.products.map((item) => {
+        return <ItemCard key={item.id} data={item} />;
+      })}
+    </>
+  );
+};
+
 const Shop = () => {
-  const [items, setItems] = useState(null);
-  const [error, setError] = useState(null);
+  const [items, setItems] = useState([]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`https://fortnite-api.com/v2/cosmetics/br/new`)
-      .then((response) => response.json())
-      .then((data) => {
-        setItems(
-          data.data.items.filter(
-            (item) =>
-              item.name !== "TBD" &&
-              ["backpack", "pickaxe", "glider"].includes(item.type.value)
-          )
-        );
-      })
-      .catch((error) => setError(error));
+    fetchItems();
   }, []);
 
-  if (items === null) return <LoadingSpinner />;
-  if (error !== null) return <h3>{error.message}</h3>;
+  const fetchItems = async () => {
+    try {
+      const response = await fetch(
+        `https://fortnite-api.com/v2/cosmetics/br/new`
+      );
+      const data = await response.json();
+      const filtered = data.data.items.filter(
+        (item) =>
+          item.name !== "TBD" &&
+          ["backpack", "pickaxe", "glider"].includes(item.type.value)
+      );
+      setItems(filtered);
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  if (error !== "") return <h3>{error}</h3>;
 
   return (
     <section className="Shop">
-      {items.map((item) => {
-        return <ItemCard key={item.id} data={item} />;
-      })}
+      {items.length > 0 ? <Temp products={items} /> : <LoadingSpinner />}
     </section>
   );
 };
