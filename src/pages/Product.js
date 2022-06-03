@@ -11,31 +11,42 @@ const generatePriceValue = (type) => {
 };
 
 const Product = (props) => {
-  const [itemInfo, setItemInfo] = useState(null);
+  const [itemInfo, setItemInfo] = useState({});
+  const [error, setError] = useState("");
   const { itemId } = useParams();
 
   useEffect(() => {
-    fetch(`https://fortnite-api.com/v2/cosmetics/br/${itemId}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setItemInfo({
-          id: data.data.id,
-          image: data.data.images.icon,
-          name: data.data.name,
-          price: generatePriceValue(data.data.type.value),
-          quantity: 1,
-          description: data.data.description,
-          introduction: data.data.introduction.text,
-          set: data.data.set.text,
-        });
-      });
+    fetchProduct();
   }, []);
 
-  if (!itemInfo) return <LoadingSpinner />;
+  const fetchProduct = async () => {
+    try {
+      const response = await fetch(
+        `https://fortnite-api.com/v2/cosmetics/br/${itemId}`
+      );
+      if (!response.ok) throw new Error("Connection error!");
+      const responseData = await response.json();
+
+      setItemInfo({
+        id: responseData.data.id,
+        image: responseData.data.images.icon,
+        name: responseData.data.name,
+        price: generatePriceValue(responseData.data.type.value),
+        quantity: 1,
+        description: responseData.data.description,
+        introduction: responseData.data.introduction.text,
+        set: responseData.data.set.text,
+      });
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  if (itemInfo.name === undefined && error === "") return <LoadingSpinner />;
+  if (error !== "") return <h3 className="error">{error}</h3>;
 
   return (
-    <div className="Product">
+    <article className="Product">
       <img className="Product__image" src={itemInfo.image} />
 
       <div className="Product__info">
@@ -45,9 +56,7 @@ const Product = (props) => {
         <p>
           {itemInfo.introduction} {itemInfo.set}
         </p>
-        <h4 className="Product__info__price">
-          Price: ${itemInfo.price.toFixed(2)}
-        </h4>
+        <h4 className="Product__info__price">Price: ${itemInfo.price}</h4>
         <div className="Product__info__control">
           <button
             className="btn"
@@ -61,7 +70,7 @@ const Product = (props) => {
           </Link>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

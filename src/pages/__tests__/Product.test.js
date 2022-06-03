@@ -2,49 +2,54 @@ import { render, screen } from "@testing-library/react";
 import "whatwg-fetch";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
-import shopMock from "../../mocks/testData.json";
-import Shop from "../Shop";
+import productMock from "../../mocks/mockProductData.json";
+import Product from "../Product";
 import { BrowserRouter } from "react-router-dom";
 
-const MockShop = () => {
+const MockProduct = () => {
   return (
     <BrowserRouter>
-      <Shop />
+      <Product />
     </BrowserRouter>
   );
 };
 
 const server = setupServer(
-  rest.get(`https://fortnite-api.com/v2/cosmetics/br/new`, (req, res, ctx) => {
-    return res(ctx.status(200), ctx.json(shopMock));
-  })
+  rest.get(
+    `https://fortnite-api.com/v2/cosmetics/br/:itemId`,
+    (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json(productMock));
+    }
+  )
 );
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-describe("Shop page component", () => {
+describe("Product page component", () => {
   test("should render loading spinner while data is loading", () => {
-    render(<MockShop />);
+    render(<MockProduct />);
     expect(screen.getByAltText("loading spinner")).toHaveClass(
       "LoadingSpinner__spinner"
     );
   });
-  test("should render product items", async () => {
-    render(<MockShop />);
-    const linkElements = await screen.findAllByRole("link");
-    expect(linkElements.length).toBe(3);
+
+  test("should render product", async () => {
+    render(<MockProduct />);
+    const linkElements = await screen.findByRole("article");
+    expect(linkElements).toBeInTheDocument();
   });
+
   test("handle fetch error", async () => {
     server.use(
       rest.get(
-        "https://fortnite-api.com/v2/cosmetics/br/new",
+        "https://fortnite-api.com/v2/cosmetics/br/:itemId",
         (req, res, ctx) => {
           return res(ctx.status(400), ctx.json({ message: "Woops!" }));
         }
       )
     );
-    render(<MockShop />);
+    render(<MockProduct />);
     const errorElement = await screen.findByRole("heading");
     expect(errorElement).toHaveClass("error");
   });

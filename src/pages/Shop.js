@@ -2,17 +2,6 @@ import React, { useEffect, useState } from "react";
 import ItemCard from "../components/ItemCard";
 import LoadingSpinner from "../components/LoadingSpinner";
 
-const Temp = (props) => {
-  console.log("temp", props);
-  return (
-    <>
-      {props.products.map((item) => {
-        return <ItemCard key={item.id} data={item} />;
-      })}
-    </>
-  );
-};
-
 const Shop = () => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState("");
@@ -26,8 +15,9 @@ const Shop = () => {
       const response = await fetch(
         `https://fortnite-api.com/v2/cosmetics/br/new`
       );
-      const data = await response.json();
-      const filtered = data.data.items.filter(
+      if (!response.ok) throw new Error("Connection error!");
+      const responseData = await response.json();
+      const filtered = responseData.data.items.filter(
         (item) =>
           item.name !== "TBD" &&
           ["backpack", "pickaxe", "glider"].includes(item.type.value)
@@ -38,11 +28,14 @@ const Shop = () => {
     }
   };
 
-  if (error !== "") return <h3>{error}</h3>;
+  if (items.length === 0 && error === "") return <LoadingSpinner />;
+  if (error !== "") return <h3 className="error">{error}</h3>;
 
   return (
     <section className="Shop">
-      {items.length > 0 ? <Temp products={items} /> : <LoadingSpinner />}
+      {items.map((item) => {
+        return <ItemCard key={item.id} data={item} />;
+      })}
     </section>
   );
 };
