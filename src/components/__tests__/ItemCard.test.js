@@ -1,45 +1,39 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import "@testing-library/jest-dom";
 import ItemCard from "../ItemCard";
+import propsMock from "../../mocks/itemCardPropsData.json";
 
 const MockItemCard = () => {
   return (
     <BrowserRouter>
-      <ItemCard data={propData} />
+      <ItemCard data={propsMock} />
     </BrowserRouter>
   );
 };
 
-const propData = {
-  id: 1,
-  name: "temp",
-  images: { icon: "/temp-path.jpg" },
-  type: { value: "backpack" },
-};
-
 describe("ItemCard component", () => {
+  test("render ItemCard snapshot", () => {
+    const { container } = render(<MockItemCard />);
+    expect(container).toMatchSnapshot();
+  });
+
   test("component is link", () => {
     render(<MockItemCard />);
-    const linkElement = screen.getByRole("link");
-    expect(linkElement).toHaveClass("ItemCard__info__link");
+    expect(screen.getByRole("link")).toHaveClass("ItemCard__info__link");
   });
 
   test("renders image", () => {
     render(<MockItemCard />);
-    const imageElement = screen.getByRole("img");
-    expect(imageElement).toBeInTheDocument();
+    expect(screen.getByRole("img")).toBeInTheDocument();
   });
 
   test("render header with name of item", () => {
     render(<MockItemCard />);
-    const headingElement = screen.getByRole("heading");
-    expect(headingElement.textContent).toEqual("temp");
+    expect(screen.getByRole("heading").textContent).toEqual("temp");
   });
 
   test("paragraph renders item type", () => {
     render(<MockItemCard />);
-    const paraElement = screen.getByText("backpack");
-    expect(paraElement).toBeInTheDocument();
+    expect(screen.getByText("backpack")).toBeInTheDocument();
   });
 });

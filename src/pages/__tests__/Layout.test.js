@@ -14,13 +14,11 @@ const MockLayout = (props) => {
 describe("Layout", () => {
   test("layout renders navbar", () => {
     render(<MockLayout cartLength={1} />);
-    const navbarElement = screen.getByRole("navigation");
-    expect(navbarElement).toBeInTheDocument();
+    expect(screen.getByRole("navigation")).toBeInTheDocument();
   });
 
   test("layout passes right amount of cart items to cart icon", () => {
     render(<MockLayout cartLength={10} />);
-    const cartItemCounterElement = screen.getByTestId("cart-item-counter");
-    expect(cartItemCounterElement.textContent).toBe("10");
+    expect(screen.getByText("10")).toHaveClass("CartLink__counter");
   });
 });

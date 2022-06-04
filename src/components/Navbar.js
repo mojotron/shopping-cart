@@ -8,7 +8,6 @@ const Navbar = (props) => {
     <nav className="Navbar">
       <ul className="Navbar__list">
         <NavLink
-          data-testid="navbar-link-page"
           to="/"
           className={({ isActive }) =>
             isActive ? "Navbar__item active" : "Navbar__item"
@@ -17,7 +16,6 @@ const Navbar = (props) => {
           Home
         </NavLink>
         <NavLink
-          data-testid="navbar-link-page"
           to="/shop"
           className={({ isActive }) =>
             isActive ? "Navbar__item active" : "Navbar__item"

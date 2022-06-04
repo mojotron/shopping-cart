@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "whatwg-fetch";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
-import shopMock from "../../mocks/testData.json";
+import shopMock from "../../mocks/mockShopData.json";
 import Shop from "../Shop";
 import { BrowserRouter } from "react-router-dom";
 

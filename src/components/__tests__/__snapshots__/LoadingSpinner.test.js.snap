@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingSpinner component render LoadingSpinner snapshot 1`] = `
+<div>
+  <div
+    class="LoadingSpinner"
+  >
+    <img
+      alt="loading spinner"
+      class="LoadingSpinner__spinner"
+      src="loading.svg"
+    />
+  </div>
+</div>
+`;

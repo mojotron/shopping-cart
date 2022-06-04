@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error page render Error snapshot 1`] = `
+<div>
+  <section
+    class="Error"
+  >
+    <h1
+      class="Error__heading"
+    >
+      404 Page not Found
+    </h1>
+    <a
+      class="Error__home-link"
+      href="/"
+    >
+      back to home
+    </a>
+  </section>
+</div>
+`;

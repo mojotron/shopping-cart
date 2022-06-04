@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemCard component render ItemCard snapshot 1`] = `
+<div>
+  <a
+    class="ItemCard__info__link"
+    href="/shop/1"
+  >
+    <div
+      class="ItemCard"
+    >
+      <img
+        alt="temp"
+        class="ItemCard__image"
+        src="/temp-path.jpg"
+      />
+      <div
+        class="ItemCard__info"
+      >
+        <h3
+          class="ItemCard__info__name"
+        >
+          temp
+        </h3>
+        <p
+          class="ItemCard__info__type"
+        >
+          backpack
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+`;

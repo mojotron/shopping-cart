@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem component render CartItem snapshot with mock 1`] = `
+<div>
+  <div
+    class="CartItem"
+  >
+    <img
+      alt="temp"
+      class="CartItem__icon"
+      src="./image.jpg"
+    />
+    <div
+      class="CartItem__info"
+    >
+      <h3>
+        temp
+      </h3>
+      <p
+        title="item-type"
+      >
+        backpack
+      </p>
+      <div
+        class="CartItem__quantity"
+      >
+        <button
+          class="btn btn--update-quantity"
+          data-id="1"
+        >
+          -
+        </button>
+        <p
+          title="item-quantity"
+        >
+          2
+        </p>
+        <button
+          class="btn btn--update-quantity"
+          data-id="1"
+        >
+          +
+        </button>
+      </div>
+    </div>
+    <div
+      class="CartItem__price"
+    >
+      <p>
+        $
+        10
+      </p>
+    </div>
+  </div>
+</div>
+`;

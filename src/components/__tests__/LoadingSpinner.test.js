@@ -3,15 +3,18 @@ import "@testing-library/jest-dom";
 import LoadingSpinner from "../LoadingSpinner";
 
 describe("LoadingSpinner component", () => {
+  test("render LoadingSpinner snapshot", () => {
+    const { container } = render(<LoadingSpinner />);
+    expect(container).toMatchSnapshot();
+  });
+
   test("has image", () => {
     render(<LoadingSpinner />);
-    const imgElement = screen.getByRole("img");
-    expect(imgElement).toBeInTheDocument();
+    expect(screen.getByRole("img")).toBeInTheDocument();
   });
 
   test("image has spinning class", () => {
     render(<LoadingSpinner />);
-    const imgElement = screen.getByRole("img");
-    expect(imgElement).toHaveClass("LoadingSpinner__spinner");
+    expect(screen.getByRole("img")).toHaveClass("LoadingSpinner__spinner");
   });
 });

@@ -3,15 +3,18 @@ import "@testing-library/jest-dom";
 import Home from "../Home";
 
 describe("Home page", () => {
+  test("render Home snapshot", () => {
+    const { container } = render(<Home />);
+    expect(container).toMatchSnapshot();
+  });
+
   test("main heading with text content", () => {
     render(<Home />);
-    const headingElement = screen.getByText(/new fortnite goodies/i);
-    expect(headingElement).toBeInTheDocument();
+    expect(screen.getByText(/new fortnite goodies/i)).toBeInTheDocument();
   });
 
   test("h2 with text content", () => {
     render(<Home />);
-    const headingElement = screen.getByText(/explore the shop for/i);
-    expect(headingElement).toBeInTheDocument();
+    expect(screen.getByText(/explore the shop for/i)).toBeInTheDocument();
   });
 });

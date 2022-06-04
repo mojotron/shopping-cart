@@ -14,17 +14,16 @@ const MockCartLink = (props) => {
 describe("CarLink component", () => {
   test("render shopping cart icon", () => {
     render(<MockCartLink cartLength={1} />);
-    const imageElement = screen.getByRole("img");
-    expect(imageElement).toHaveClass("CartLink__icon");
+    expect(screen.getByRole("img")).toHaveClass("CartLink__icon");
   });
+
   test("render shopping cart counter when items are added", () => {
     render(<MockCartLink cartLength={5} />);
-    const divElement = screen.getByTestId("cart-item-counter");
-    expect(divElement.textContent).toBe("5");
+    expect(screen.getByText("5")).toHaveClass("CartLink__counter");
   });
+
   test("not rendering shopping counter when items are 0", () => {
     render(<MockCartLink cartLength={0} />);
-    const divElement = screen.queryByTestId("cart-item-counter");
-    expect(divElement).toBe(null);
+    expect(screen.queryByText("0")).toBe(null);
   });
 });
