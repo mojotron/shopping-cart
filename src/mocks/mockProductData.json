@@ -1,19 +1,13 @@
 {
   "status": 200,
   "data": {
-    "id": "BID_A_010_JumbotronS20Male",
-    "name": "Targeter's Tally",
-    "description": "Every elim counts.",
+    "id": "fake id",
+    "name": "Fake",
+    "description": "Fake item",
     "type": {
-      "value": "backpack",
-      "displayValue": "Back Bling",
-      "backendValue": "AthenaBackpack"
+      "value": "backpack"
     },
-    "rarity": {
-      "value": "uncommon",
-      "displayValue": "Uncommon",
-      "backendValue": "EFortRarity::Uncommon"
-    },
+
     "series": null,
     "set": {
       "value": "Fortnite Champion Series",
@@ -31,28 +25,6 @@
       "icon": "https://fortnite-api.com/images/cosmetics/br/bid_a_010_jumbotrons20male/icon.png",
       "featured": "https://fortnite-api.com/images/cosmetics/br/bid_a_010_jumbotrons20male/featured.png",
       "other": null
-    },
-    "variants": null,
-    "searchTags": null,
-    "gameplayTags": [
-      "Cosmetics.Source.ItemShop",
-      "Cosmetics.Filter.Season.20",
-      "Cosmetics.UserFacingFlags.Reactive",
-      "Cosmetics.Set.FNCS"
-    ],
-    "metaTags": null,
-    "showcaseVideo": "9ZPpy-rxvno",
-    "dynamicPakId": null,
-    "displayAssetPath": null,
-    "definitionPath": null,
-    "path": "FortniteGame/Content/Athena/Items/Cosmetics/Backpacks/BID_A_010_JumbotronS20Male",
-    "added": "2022-05-17T08:48:22Z",
-    "shopHistory": [
-      "2022-05-26T00:00:00Z",
-      "2022-05-27T00:00:00Z",
-      "2022-05-28T00:00:00Z",
-      "2022-05-29T00:00:00Z",
-      "2022-05-30T00:00:00Z"
-    ]
+    }
   }
 }

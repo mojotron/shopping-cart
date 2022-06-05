@@ -54,4 +54,10 @@ describe("Product page component", () => {
     const errorElement = await screen.findByRole("heading");
     expect(errorElement).toHaveClass("error");
   });
+
+  test("add button", async () => {
+    render(<MockProduct />);
+    const addBtn = await screen.findByRole("button");
+    expect(addBtn.textContent).toBe("Add to cart");
+  });
 });
