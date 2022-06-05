@@ -46,6 +46,7 @@ function App() {
         if (ele.id !== id) {
           return { ...ele };
         }
+        return false;
       });
       setCartItems(newCartItems);
     } else {
