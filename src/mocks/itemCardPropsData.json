@@ -1,6 +1,0 @@
-{
-  "id": 1,
-  "name": "temp",
-  "images": { "icon": "/temp-path.jpg" },
-  "type": { "value": "backpack" }
-}
