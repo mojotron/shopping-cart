@@ -5,7 +5,13 @@ type PropsType = {
 };
 
 const StoreItem = ({ item }: PropsType) => {
-  return <article>StoreItem</article>;
+  return (
+    <article>
+      <h3>{item.name}</h3>
+      <img src={item.imageUrl} alt={item.name} />
+      <p>${item.price}</p>
+    </article>
+  );
 };
 
 export default StoreItem;

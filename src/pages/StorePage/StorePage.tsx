@@ -1,10 +1,11 @@
+import StoreItem from '../../components/StoreItem/StoreItem';
 import storeData from '../../data/storeItems.json';
 
 const StorePage = () => {
   return (
     <div>
       {storeData.map((item) => (
-        <div key={item.id}>{item.name}</div>
+        <StoreItem key={item.id} item={item} />
       ))}
     </div>
   );

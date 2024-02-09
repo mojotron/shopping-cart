@@ -5,7 +5,7 @@
     "description": "aaa",
     "price": 10,
     "available": true,
-    "imageUrl": ""
+    "imageUrl": "./images/arrows-1.jpg"
   },
   {
     "id": 1,
@@ -13,7 +13,7 @@
     "description": "bbb",
     "price": 11,
     "available": true,
-    "imageUrl": ""
+    "imageUrl": "./images/arrows-1.jpg"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "description": "ccc",
     "price": 12,
     "available": true,
-    "imageUrl": ""
+    "imageUrl": "./images/arrows-1.jpg"
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
     "description": "ddd",
     "price": 13,
     "available": false,
-    "imageUrl": ""
+    "imageUrl": "./images/arrows-1.jpg"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "description": "eee",
     "price": 14,
     "available": false,
-    "imageUrl": ""
+    "imageUrl": "./images/arrows-1.jpg"
   },
   {
     "id": 5,
@@ -45,7 +45,7 @@
     "description": "fff",
     "price": 15,
     "available": false,
-    "imageUrl": ""
+    "imageUrl": "./images/arrows-1.jpg"
   },
   {
     "id": 6,
@@ -53,6 +53,6 @@
     "description": "ggg",
     "price": 16,
     "available": false,
-    "imageUrl": ""
+    "imageUrl": "./images/arrows-1.jpg"
   }
 ]
