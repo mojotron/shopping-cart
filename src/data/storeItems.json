@@ -1,9 +1,9 @@
 [
   {
     "id": 0,
-    "name": "a",
+    "name": "Kale",
     "description": "aaa",
-    "price": 10,
+    "price": 1.25,
     "available": true,
     "imageUrl": "./images/arrows-1.jpg"
   },
