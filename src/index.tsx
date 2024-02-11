@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage/HomePage';
 import AboutPage from './pages/AboutPage';
 import StorePage from './pages/StorePage/StorePage';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
+import { CartContextProvider } from './contexts/CartContext';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartContextProvider>
+      <RouterProvider router={router} />
+    </CartContextProvider>
   </React.StrictMode>
 );

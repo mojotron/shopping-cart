@@ -2,57 +2,57 @@
   {
     "id": 0,
     "name": "Kale",
-    "description": "aaa",
+    "description": "Kale is grown mainly for autumn and winter harvest, as cold improves its eating quality and flavour; its hardiness permits harvest of fresh greens after most fresh vegetables have become unavailable. The leaves can be eaten fresh or as a cooked vegetable and are a source of vitamin A, vitamin C, calcium, iron, and vitamin B6.",
     "price": 1.25,
     "available": true,
-    "imageUrl": "./images/arrows-1.jpg"
+    "imageUrl": "./images/natasha-skov-kale.jpg"
   },
   {
     "id": 1,
-    "name": "b",
-    "description": "bbb",
-    "price": 11,
+    "name": "carrot",
+    "description": "Fresh, firm and crisp carrots. Bright-orange color indicates high carotene content. Carrots are used in salads and as relishes and are served as cooked vegetables and in stews and soups.",
+    "price": 0.5,
     "available": true,
-    "imageUrl": "./images/arrows-1.jpg"
+    "imageUrl": "./images/maja-vujic-carrot.jpg"
   },
   {
     "id": 2,
-    "name": "c",
-    "description": "ccc",
+    "name": "tomato",
+    "description": "We have red, scarlet, or yellow, though green and purple varieties, and they vary in shape from almost spherical to oval and elongate to pear-shaped. We will pick best ones and bring you best quality.",
     "price": 12,
     "available": true,
-    "imageUrl": "./images/arrows-1.jpg"
+    "imageUrl": "./images/shelley-pauls-tomato.jpg"
   },
   {
     "id": 3,
-    "name": "d",
-    "description": "ddd",
+    "name": "cucumber",
+    "description": "The nutritional value of the cucumber is low, but its delicate flavour makes it popular for salads and relishes.",
     "price": 13,
     "available": false,
-    "imageUrl": "./images/arrows-1.jpg"
+    "imageUrl": "./images/harshal-s-hirve-cucumber.jpg"
   },
   {
     "id": 4,
-    "name": "e",
+    "name": "garlic",
     "description": "eee",
     "price": 14,
     "available": false,
-    "imageUrl": "./images/arrows-1.jpg"
+    "imageUrl": "./images/anshu-a-yu-garlic.jpg"
   },
   {
     "id": 5,
-    "name": "f",
-    "description": "fff",
+    "name": "potato",
+    "description": "Potatoes are frequently served whole or mashed as a cooked vegetable and are also ground into potato flour, used in baking and as a thickener for sauces. The tubers are highly digestible and supply vitamin C, protein, thiamin, and niacin.",
     "price": 15,
     "available": false,
-    "imageUrl": "./images/arrows-1.jpg"
+    "imageUrl": "./images/eric-prouzet-potato.jpg"
   },
   {
     "id": 6,
-    "name": "g",
-    "description": "ggg",
+    "name": "broccoli",
+    "description": "High in dietary fibre and a number of vitamins and minerals, including potassium, folic acid, and vitamins A, C, and K, broccoli is a nutritious vegetable and can be eaten fresh or cooked. Fresh broccoli should be dark green in color, with firm stalks and compact bud clusters.",
     "price": 16,
     "available": false,
-    "imageUrl": "./images/arrows-1.jpg"
+    "imageUrl": "./images/hans-ripa-broccoli.jpg"
   }
 ]
