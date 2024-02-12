@@ -14,7 +14,6 @@ const StoreItem = ({ item }: PropsType) => {
 
   // temp => context
   const handleAddItem = () => {
-    console.log('YO');
     addToCart({ ...item, quantity });
     setQuantity(MIN_QUANTITY);
   };
