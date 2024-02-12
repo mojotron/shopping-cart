@@ -36,7 +36,7 @@
     "name": "garlic",
     "description": "eee",
     "price": 14,
-    "available": false,
+    "available": true,
     "imageUrl": "./images/anshu-a-yu-garlic.jpg"
   },
   {
@@ -44,7 +44,7 @@
     "name": "potato",
     "description": "Potatoes are frequently served whole or mashed as a cooked vegetable and are also ground into potato flour, used in baking and as a thickener for sauces. The tubers are highly digestible and supply vitamin C, protein, thiamin, and niacin.",
     "price": 15,
-    "available": false,
+    "available": true,
     "imageUrl": "./images/eric-prouzet-potato.jpg"
   },
   {

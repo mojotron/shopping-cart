@@ -9,28 +9,37 @@ type StateType = {
   status: StatusType;
 };
 
+type UpdateQuantityType = 'increment' | 'decrement';
+
 type ActionsType =
-  | { type: 'cart/add-item'; payload: CartItemType }
-  | { type: 'cart/remove-item'; payload: number }
+  | { type: 'cart/add-item'; newItem: CartItemType }
+  | { type: 'cart/increment-quantity'; itemId: number }
+  | { type: 'cart/decrement-quantity'; itemId: number }
+  | { type: 'cart/remove-item'; itemId: number }
   | { type: 'cart/clear-items' }
   | { type: 'cart/toggle' };
 
 const reducer = (state: StateType, action: ActionsType): StateType => {
   switch (action.type) {
     case 'cart/add-item': {
-      const itemExists = state.cart.find(
-        (item) => item.id === action.payload.id
-      );
-      // item doesnt exist and item to the cart
-      if (itemExists === undefined) {
-        return { ...state, cart: [...state.cart, action.payload] };
-      }
-      // item exists, update quantity ot that item
+      return { ...state, cart: [...state.cart, action.newItem] };
+    }
+    case 'cart/increment-quantity': {
       return {
         ...state,
         cart: state.cart.map((item) =>
-          item.id === action.payload.id
-            ? { ...item, quantity: item.quantity + action.payload.quantity }
+          item.id === action.itemId
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        ),
+      };
+    }
+    case 'cart/decrement-quantity': {
+      return {
+        ...state,
+        cart: state.cart.map((item) =>
+          item.id === action.itemId
+            ? { ...item, quantity: item.quantity - 1 }
             : item
         ),
       };
@@ -38,7 +47,7 @@ const reducer = (state: StateType, action: ActionsType): StateType => {
     case 'cart/remove-item': {
       return {
         ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload),
+        cart: state.cart.filter((item) => item.id !== action.itemId),
       };
     }
     case 'cart/clear-items': {
@@ -59,6 +68,7 @@ const useCartSource = (): {
   cart: CartItemType[];
   addToCart: (newItem: CartItemType) => void;
   removeFromCart: (itemId: number) => void;
+  updateItemQuantity: (itemId: number, option: UpdateQuantityType) => void;
   clearCart: () => void;
   toggleCart: () => void;
 } => {
@@ -69,11 +79,11 @@ const useCartSource = (): {
   });
 
   const addToCart = useCallback((newItem: CartItemType) => {
-    dispatch({ type: 'cart/add-item', payload: newItem });
+    dispatch({ type: 'cart/add-item', newItem });
   }, []);
 
   const removeFromCart = useCallback((itemId: number) => {
-    dispatch({ type: 'cart/remove-item', payload: itemId });
+    dispatch({ type: 'cart/remove-item', itemId });
   }, []);
 
   const clearCart = useCallback(() => {
@@ -84,7 +94,26 @@ const useCartSource = (): {
     dispatch({ type: 'cart/toggle' });
   }, []);
 
-  return { showCart, cart, addToCart, removeFromCart, clearCart, toggleCart };
+  const updateItemQuantity = useCallback(
+    (itemId: number, option: UpdateQuantityType) => {
+      if (option === 'increment')
+        dispatch({ type: 'cart/increment-quantity', itemId });
+      if (option === 'decrement') {
+        dispatch({ type: 'cart/decrement-quantity', itemId });
+      }
+    },
+    []
+  );
+
+  return {
+    showCart,
+    cart,
+    addToCart,
+    removeFromCart,
+    clearCart,
+    toggleCart,
+    updateItemQuantity,
+  };
 };
 
 export const CartContext = createContext<ReturnType<typeof useCartSource>>(
