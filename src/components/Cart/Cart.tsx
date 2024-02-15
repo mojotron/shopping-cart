@@ -12,7 +12,7 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div className="fixed px-8 py-16 w-[350px] h-[100vh] bg-emerald-500 z-50  top-0 right-[0] transition duration-400 ease-in-out">
+    <div className="fixed px-8 py-16 w-[350px] h-[100vh] bg-emerald-400 z-50  top-0 right-[0] transition duration-400 ease-in-out shadow-[0_2px_100px_25px_rgba(30,30,30)]">
       <CloseButton onClick={toggleCart} />
 
       <CartItemList>

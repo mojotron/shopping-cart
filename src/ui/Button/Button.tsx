@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-type BtnType = 'default' | 'remove' | 'increment';
+type BtnType = 'default' | 'remove' | 'increment' | 'none';
 
 type PropsType = {
   onClick: () => void;
@@ -11,12 +11,15 @@ type PropsType = {
 
 const getBtnTypeColors = (type: BtnType) => {
   if (type === 'remove') {
-    return 'bg-red-400';
+    return 'bg-red-400 rounded-md';
   }
   if (type === 'increment') {
-    return 'bg-gray-400';
+    return 'bg-emerald-400 rounded-full w-8 h-8 ';
   }
-  return 'bg-emerald-400';
+  if (type === 'none') {
+    return '';
+  }
+  return 'bg-emerald-600 rounded-md';
 };
 
 const Button = ({
@@ -30,7 +33,7 @@ const Button = ({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`px-2 py-1 disabled:bg-gray-300 disabled:text-gray-100 ${getBtnTypeColors(type)}`}
+      className={`font-bold text-white px-2 py-1 disabled:bg-gray-300 disabled:text-gray-100 ${getBtnTypeColors(type)}`}
     >
       {children}
     </button>

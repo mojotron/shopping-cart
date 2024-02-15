@@ -10,8 +10,8 @@ const ItemQuantityControl = ({ item }: PropsType) => {
   const { updateItemQuantity, removeFromCart } = useCart();
 
   return (
-    <div>
-      <div>
+    <div className="flex flex-col items-center gap-2 py-4 px-2">
+      <div className="flex items-center gap-3">
         <Button
           type="increment"
           onClick={() => {
@@ -21,7 +21,9 @@ const ItemQuantityControl = ({ item }: PropsType) => {
         >
           -
         </Button>
-        <span>{item.quantity}</span>
+        <span className="font-bold font-righteous text-emerald-600">
+          {item.quantity}
+        </span>
         <Button
           type="increment"
           onClick={() => updateItemQuantity(item.id, 'increment')}
