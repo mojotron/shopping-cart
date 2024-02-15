@@ -10,10 +10,13 @@ const navConfig = [
 const Navigation = () => {
   return (
     <nav>
-      <ul className="flex gap-3">
+      <ul className="flex gap-3 font-righteous text-emerald-600 text-lg">
         {navConfig.map((ele) => (
           <li key={ele.path}>
-            <NavLink to={ele.path} className="aria-[current=page]:text-red-400">
+            <NavLink
+              to={ele.path}
+              className="aria-[current=page]:text-emerald-900 aria-[current=page]:underline hover:text-emerald-400"
+            >
               {ele.display}
             </NavLink>
           </li>
