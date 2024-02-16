@@ -12,7 +12,7 @@ import Logo from '../Logo/Logo';
 
 const Footer = () => {
   return (
-    <footer className="relative w-full border-t border-emerald-300 bg-neutral-200 pt-12 pb-24 px-8 flex sm:flex-col lg:flex-row gap-5 text-neutral-900">
+    <footer className="mt-16 relative w-full border-t border-emerald-300 bg-neutral-200 pt-12 pb-24 px-8 flex sm:flex-col lg:flex-row gap-5 text-neutral-900">
       <section className="lg:w-[250px] flex flex-col gap-5 text-sm sm:w-full">
         <Logo />
         <p className="">

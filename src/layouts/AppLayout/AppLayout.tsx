@@ -8,7 +8,7 @@ const AppLayout = () => {
   const { showCart } = useCart();
 
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col pt-36">
       <Header />
       <Outlet />
       <Footer />
