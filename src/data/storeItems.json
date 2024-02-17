@@ -2,57 +2,156 @@
   {
     "id": 0,
     "name": "Kale",
-    "description": "Kale is grown mainly for autumn and winter harvest, as cold improves its eating quality and flavour; its hardiness permits harvest of fresh greens after most fresh vegetables have become unavailable. The leaves can be eaten fresh or as a cooked vegetable and are a source of vitamin A, vitamin C, calcium, iron, and vitamin B6.",
-    "price": 1.25,
+    "description": "Kale is a member of the cabbage (Brassica) family and is often labeled a superfood because it is so high in nutrients per calorie.1 Kale is also low in fat and high in fiber, making it a great addition to almost any diet for the substantial nutritional and health benefits it provides. Different varieties of kale provide different eating experiences. Some are more pungent, for instance, while others have a fairly mellow flavor. This enables you to choose the variety that you enjoy most.",
+    "price": 2.25,
+    "sellingUnit": "kg",
     "available": true,
-    "imageUrl": "./images/natasha-skov-kale.jpg"
+    "imageUrl": "./images/natasha-skov-kale.jpg",
+    "nutrition": {
+      "measure": "1 cup (20g)",
+      "description": "Kale provides great nutritional benefits, like vitamin A and vitamin C, for very few calories",
+      "calories": 7.2,
+      "fat": 0.3,
+      "protein": 0.6,
+      "carbs": 0.9,
+      "fiber": 0.8,
+      "labels": [
+        "cholesterol-free",
+        "fat-free",
+        "good source of fiber",
+        "sodium-free"
+      ]
+    }
   },
   {
     "id": 1,
     "name": "carrot",
-    "description": "Fresh, firm and crisp carrots. Bright-orange color indicates high carotene content. Carrots are used in salads and as relishes and are served as cooked vegetables and in stews and soups.",
-    "price": 0.5,
+    "description": "If you like crunchy snacks, carrots are a great go-to. These veggies are packed full of nutrients like vitamin A, vitamin K, and potassium. Although carrots are root vegetables, they are not as high in carbohydrates as other root veggies. Carrots add a pop of color and a range of beneficial nutrients to salads, soups, stews, and side dishes.",
+    "price": 1.5,
+    "sellingUnit": "kg",
     "available": true,
-    "imageUrl": "./images/maja-vujic-carrot.jpg"
+    "imageUrl": "./images/maja-vujic-carrot.jpg",
+    "nutrition": {
+      "measure": "1 medium carrot (61g)",
+      "description": "Thirty grams of carrots provides you entire daily requrement of vitamin A",
+      "calories": 25,
+      "fat": 0,
+      "protein": 0.5,
+      "carbs": 6,
+      "fiber": 1.5,
+      "labels": ["cholesterol-free", "fat-free", "low-calorie", "low-sodium"]
+    }
   },
   {
     "id": 2,
     "name": "tomato",
-    "description": "We have red, scarlet, or yellow, though green and purple varieties, and they vary in shape from almost spherical to oval and elongate to pear-shaped. We will pick best ones and bring you best quality.",
-    "price": 12,
+    "description": "Have you ever wondered if a tomato is a fruit or a vegetable? Botanists classify tomatoes as fruit because they develop from the ovary of flowering plants and contain seeds. However, because tomatoes are prepared and served as vegetables, they're generally thought of as a vegetable from a culinary perspective. Either way, tomatoes are a delicious and nutritious food that makes a good addition to most healthy eating plans. Tomatoes contain several nutrients and compounds important for health, such as vitamin C, lycopene, potassium, and vitamin K, among others.",
+    "price": 2.5,
+    "sellingUnit": "kg",
     "available": true,
-    "imageUrl": "./images/shelley-pauls-tomato.jpg"
+    "imageUrl": "./images/shelley-pauls-tomato.jpg",
+    "nutrition": {
+      "measure": "1 small (91g)",
+      "description": "Tomatoes are an excellent source of nutrients like vitamin C and vitamin A",
+      "calories": 16,
+      "fat": 0.2,
+      "protein": 0.8,
+      "carbs": 3.5,
+      "fiber": 1.1,
+      "labels": ["cholesterol-free", "fat-free", "low-calorie", "low-sodium"]
+    }
   },
   {
     "id": 3,
     "name": "cucumber",
-    "description": "The nutritional value of the cucumber is low, but its delicate flavour makes it popular for salads and relishes.",
-    "price": 13,
+    "description": "Cucumbers are crisp and refreshing due to their high water content. However, with 95% water, you may be wondering whether they have much to offer by way of nutrition. Along with potassium and vitamins K and C, cucumbers have several phytochemicals with promising health benefits.",
+    "price": 3.1,
+    "sellingUnit": "kg",
     "available": false,
-    "imageUrl": "./images/harshal-s-hirve-cucumber.jpg"
+    "imageUrl": "./images/harshal-s-hirve-cucumber.jpg",
+    "nutrition": {
+      "measure": "1/2 cup, sliced (52g)",
+      "description": "Cucumbers are good source of vitamin K, which may helo with blood clot preventing",
+      "calories": 8,
+      "fat": 0.1,
+      "protein": 0.3,
+      "carbs": 1.9,
+      "fiber": 1.3,
+      "labels": [
+        "cholesterol-free",
+        "fat-free",
+        "low-calorie",
+        "sodium-free",
+        "gluten-free"
+      ]
+    }
   },
   {
     "id": 4,
     "name": "garlic",
-    "description": "eee",
-    "price": 14,
+    "description": "Garlic has been used to treat illness and disease for thousands of years. There are biblical references to the use of garlic in medicine. According to some sources, Hippocrates prescribed garlic for various illnesses, and early Olympic athletes used garlic to enhance performance. The benefits are mainly due to plant compounds, but garlic does contain several vitamins and minerals as well.",
+    "price": 0.1,
+    "sellingUnit": "clove",
     "available": true,
-    "imageUrl": "./images/anshu-a-yu-garlic.jpg"
+    "imageUrl": "./images/anshu-a-yu-garlic.jpg",
+    "nutrition": {
+      "measure": "1 clove (3g)",
+      "description": "Garlic may have immunity-enhancing and potential antioxidative benefits",
+      "calories": 4.5,
+      "fat": 0,
+      "protein": 0.2,
+      "carbs": 1,
+      "fiber": 0.1,
+      "labels": [
+        "cholesterol-free",
+        "fat-free",
+        "sodium-free",
+        "low-calorie",
+        "sugar-free"
+      ]
+    }
   },
   {
     "id": 5,
     "name": "potato",
-    "description": "Potatoes are frequently served whole or mashed as a cooked vegetable and are also ground into potato flour, used in baking and as a thickener for sauces. The tubers are highly digestible and supply vitamin C, protein, thiamin, and niacin.",
-    "price": 15,
+    "description": "Potatoes are high in starch and have developed a bad reputation due to the popularity of low-carb and Paleo diets. However, carbohydrates aren't bad for your health as long as you watch your portions. They're essential as a source of energy. Potatoes are inexpensive, versatile, can be stored for long periods, and are a good source of fiber, potassium, and vitamin C.",
+    "price": 1.25,
+    "sellingUnit": "kg",
     "available": true,
-    "imageUrl": "./images/eric-prouzet-potato.jpg"
+    "imageUrl": "./images/eric-prouzet-potato.jpg",
+    "nutrition": {
+      "measure": "1 medium (173g)",
+      "description": "Potatoes are a good source of vitamin C, vitamin B6, and potassium",
+      "calories": 164,
+      "fat": 0.2,
+      "protein": 4.6,
+      "carbs": 37,
+      "fiber": 4,
+      "labels": [
+        "cholesterol-free",
+        "low-sodium",
+        "good source of fiber",
+        "fat-free"
+      ]
+    }
   },
   {
     "id": 6,
     "name": "broccoli",
     "description": "High in dietary fibre and a number of vitamins and minerals, including potassium, folic acid, and vitamins A, C, and K, broccoli is a nutritious vegetable and can be eaten fresh or cooked. Fresh broccoli should be dark green in color, with firm stalks and compact bud clusters.",
-    "price": 16,
+    "price": 3,
+    "sellingUnit": "kg",
     "available": false,
-    "imageUrl": "./images/hans-ripa-broccoli.jpg"
+    "imageUrl": "./images/hans-ripa-broccoli.jpg",
+    "nutrition": {
+      "measure": "1 medium (173g)",
+      "description": "Broccoli is an excellent, heart-healthy choice; more then one-third of its carbohydrates come from fiber",
+      "calories": 31,
+      "fat": 0.3,
+      "protein": 2.5,
+      "carbs": 6,
+      "fiber": 2.4,
+      "labels": ["cholesterol-free", "fat-free", "low-calorie", "low-sodium"]
+    }
   }
 ]
