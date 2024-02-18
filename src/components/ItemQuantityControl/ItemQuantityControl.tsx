@@ -11,7 +11,7 @@ const ItemQuantityControl = ({ item }: PropsType) => {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <div className="flex items-center gap-3">
+      <div className="flex items-center justify-center gap-2">
         <Button
           type="increment"
           onClick={() => {
@@ -21,9 +21,11 @@ const ItemQuantityControl = ({ item }: PropsType) => {
         >
           -
         </Button>
-        <span className="font-bold font-righteous text-emerald-600">
+
+        <span className="w-6 text-center font-bold font-righteous text-emerald-600">
           {item.quantity}
         </span>
+
         <Button
           type="increment"
           onClick={() => updateItemQuantity(item.id, 'increment')}
