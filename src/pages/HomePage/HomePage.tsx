@@ -1,6 +1,8 @@
 import { FaCheckCircle } from 'react-icons/fa';
 import { GiPathDistance, GiBeech, GiBootPrints } from 'react-icons/gi';
 import Slider from '../../ui/Slider/Slider';
+import testimonialData from '../../data/testimonials.json';
+import Testimonial from '../../components/Testimonial/Testimonial';
 
 const CheckLabel = ({ label }: { label: string }) => {
   return (
@@ -80,14 +82,6 @@ const TextAndImage = ({
         </>
       )}
     </section>
-  );
-};
-// DELETE TODO
-const TempElement = ({ temp }: { temp: string }) => {
-  return (
-    <div>
-      <h2>Hello {temp}</h2>
-    </div>
   );
 };
 
@@ -180,14 +174,16 @@ const HomePage = () => {
         </main>
       </section>
 
-      <section>
+      <section className="w-[600px] h-[300px]">
         <Slider
-          slides={[
-            { id: '1', element: <TempElement temp="1" /> },
-            { id: '2', element: <TempElement temp="2" /> },
-            { id: '3', element: <TempElement temp="3" /> },
-            { id: '4', element: <TempElement temp="4" /> },
-          ]}
+          slides={testimonialData.map((t) => (
+            <Testimonial
+              key={t.id}
+              imageUrl={t.imageUrl}
+              text={t.text}
+              userName={t.name}
+            />
+          ))}
         />
       </section>
     </div>

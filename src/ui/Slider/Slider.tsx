@@ -1,53 +1,60 @@
-import React, { ReactElement, useState } from 'react';
-
-type SlideType = {
-  id: string;
-  element: ReactElement;
-};
+import React, { ReactElement, useCallback, useEffect, useState } from 'react';
+import Dots from './Dots';
+import SlideArrow from './SlideArrow';
 
 type PropsType = {
-  slides: SlideType[];
+  slides: ReactElement[];
 };
 
 const Slider = ({ slides }: PropsType) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const firstSlide = currentIndex === 0;
+  const lastSlide = currentIndex === slides.length - 1;
 
-  const handleGoLeft = () => {
-    if (currentIndex === 0) return;
+  const handleGoLeft = useCallback(() => {
+    if (firstSlide) return;
     setCurrentIndex((oldValue) => oldValue - 1);
-  };
+  }, [firstSlide]);
 
-  const handleGoRight = () => {
-    if (currentIndex === slides.length - 1) return;
+  const handleGoRight = useCallback(() => {
+    if (lastSlide) return;
     setCurrentIndex((oldValue) => oldValue + 1);
-  };
+  }, [lastSlide]);
 
-  const handleChangeSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (lastSlide) setCurrentIndex(0);
+      else setCurrentIndex((lastValue) => lastValue + 1);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [lastSlide, currentIndex]);
+
+  useEffect(() => {
+    const handleKeyboard = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') handleGoLeft();
+      if (e.key === 'ArrowRight') handleGoRight();
+    };
+
+    document.addEventListener('keydown', handleKeyboard);
+
+    return () => document.removeEventListener('keydown', handleKeyboard);
+  }, [handleGoLeft, handleGoRight]);
 
   return (
-    <div>
-      {slides[currentIndex].element}
-      <div>
-        <button type="button" onClick={handleGoLeft}>
-          left
-        </button>
-        <button type="button" onClick={handleGoRight}>
-          right
-        </button>
+    <div className="relative last:w-full h-full py-8 px-10 flex flex-col">
+      <div className="px-4">{slides[currentIndex]}</div>
 
-        <div className="flex justify-between items-center gap-3">
-          {Array.from({ length: slides.length }, (_, i) => (
-            // eslint-disable-next-line
-            <span
-              key={i}
-              onClick={() => handleChangeSlide(i)}
-              className={`inline-block w-3 h-3 ${i === currentIndex ? 'bg-emerald-600' : 'bg-neutral-400'} rounded-full`}
-            ></span>
-          ))}
-        </div>
-      </div>
+      {!firstSlide && <SlideArrow orientation="left" onClick={handleGoLeft} />}
+      {!lastSlide && <SlideArrow orientation="right" onClick={handleGoRight} />}
+
+      {slides.length > 1 && (
+        <Dots
+          length={slides.length}
+          index={currentIndex}
+          onSelectIndex={setCurrentIndex}
+        />
+      )}
     </div>
   );
 };
