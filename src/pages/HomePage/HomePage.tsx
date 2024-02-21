@@ -1,17 +1,9 @@
-import { FaCheckCircle } from 'react-icons/fa';
 import { GiPathDistance, GiBeech, GiBootPrints } from 'react-icons/gi';
 import Slider from '../../ui/Slider/Slider';
 import testimonialData from '../../data/testimonials.json';
 import Testimonial from '../../components/Testimonial/Testimonial';
-
-const CheckLabel = ({ label }: { label: string }) => {
-  return (
-    <li className="flex gap-2 items-center">
-      <FaCheckCircle size={18} className="text-emerald-600" />{' '}
-      <span className="text-emerald-600 font-bold">{label}</span>
-    </li>
-  );
-};
+import CheckLabel from '../../ui/CheckLabel/CheckLabel';
+import Heading from '../../ui/Heading/Heading';
 
 const TextSide = ({
   title,
@@ -89,9 +81,9 @@ const HomePage = () => {
   return (
     <div className="flex flex-col items-center gap-24">
       <header className="max-w-[600px] text-center">
-        <h1 className="text-emerald-600 font-bold text-5xl font-righteous mb-4">
+        <Heading level={1}>
           Get Fresh Vegetables From Ground Delivered to Your Table
-        </h1>
+        </Heading>
         <p className="text-sm text-neutral-600">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
           doloribus debitis nostrum odit, totam delectus corporis? Impedit
@@ -138,9 +130,9 @@ const HomePage = () => {
 
       <section className="bg-emerald-600 w-full pt-24 flex flex-col items-center">
         <header className="text-center w-[600px]">
-          <h2 className="text-emerald-100 text-5xl font-righteous font-bold mb-4">
+          <Heading level={2} color="secondary">
             We Will Deliver Only The Best Vegetables
-          </h2>
+          </Heading>
           <h3 className="text-emerald-200 text-md">
             Rest of the grown vegetables go to our animal farm friends as food
             for live stock

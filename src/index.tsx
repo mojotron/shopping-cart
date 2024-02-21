@@ -6,7 +6,7 @@ import './index.css';
 import AppLayout from './layouts/AppLayout/AppLayout';
 // pages
 import HomePage from './pages/HomePage/HomePage';
-import AboutPage from './pages/AboutPage';
+import AboutPage from './pages/AboutPage/AboutPage';
 import StorePage from './pages/StorePage/StorePage';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import { CartContextProvider } from './contexts/CartContext';
