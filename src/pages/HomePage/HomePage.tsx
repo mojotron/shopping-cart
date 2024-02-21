@@ -4,6 +4,7 @@ import testimonialData from '../../data/testimonials.json';
 import Testimonial from '../../components/Testimonial/Testimonial';
 import CheckLabel from '../../ui/CheckLabel/CheckLabel';
 import Heading from '../../ui/Heading/Heading';
+import Paragraph from '../../ui/Paragraph/Paragraph';
 
 const TextSide = ({
   title,
@@ -84,11 +85,11 @@ const HomePage = () => {
         <Heading level={1}>
           Get Fresh Vegetables From Ground Delivered to Your Table
         </Heading>
-        <p className="text-sm text-neutral-600">
+        <Paragraph size="small">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
           doloribus debitis nostrum odit, totam delectus corporis? Impedit
           repudiandae dolorum architecto?
-        </p>
+        </Paragraph>
       </header>
       <section>
         <TextAndImage

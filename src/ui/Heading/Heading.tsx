@@ -1,15 +1,15 @@
 import { ReactNode } from 'react';
-import { ColorType, ColorEnum } from '../../types/cssHelperTypes';
+import { HeadingColorType, HeadingColorEnum } from '../../types/cssHelperTypes';
 
 type LevelType = 1 | 2 | 3 | 4 | 5 | 6;
 
 type PropsType = {
   level?: LevelType;
-  color?: ColorType;
+  color?: HeadingColorType;
   children: ReactNode;
 };
 
-const generalStyle = 'font-bold font-righteous';
+const generalStyle = 'font-bold font-righteous capitalize';
 
 const getTextSize = (level: number) => {
   switch (level) {
@@ -31,7 +31,7 @@ const getTextSize = (level: number) => {
 };
 
 const Heading = ({ level = 1, children, color = 'primary' }: PropsType) => {
-  const style = `${generalStyle} text-${getTextSize(level)} ${ColorEnum[color]}`;
+  const style = `${generalStyle} text-${getTextSize(level)} ${HeadingColorEnum[color]}`;
 
   switch (level) {
     case 1:
