@@ -4,6 +4,7 @@ import {
   GiArrowDunk as IconNoWaste,
   GiAsparagus as IconGarden,
 } from 'react-icons/gi';
+import { useNavigate } from 'react-router-dom';
 import { ReactNode } from 'react';
 import Button from '../../ui/Button/Button';
 import CheckLabel from '../../ui/CheckLabel/CheckLabel';
@@ -11,7 +12,6 @@ import Heading from '../../ui/Heading/Heading';
 import PageSection from '../../ui/PageSection/PageSection';
 import Paragraph from '../../ui/Paragraph/Paragraph';
 import Banner from './components/Banner';
-import { useNavigate } from 'react-router-dom';
 
 type VisionType = {
   title: string;
@@ -71,7 +71,7 @@ const AboutPage = () => {
   return (
     <main className="flex flex-col gap-24 items-center text-center">
       <PageSection>
-        <Heading level={1}>Who We Are</Heading>
+        <Heading>Who We Are</Heading>
         <Paragraph size="small">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
           tenetur tempora beatae adipisci provident, et a eum, iure ea impedit
@@ -101,7 +101,7 @@ const AboutPage = () => {
       </PageSection>
 
       <PageSection>
-        <Heading level={2}>Join Our Team</Heading>
+        <Heading level={1}>Join Our Team</Heading>
         <Button onClick={() => {}}>Apply now</Button>
       </PageSection>
 

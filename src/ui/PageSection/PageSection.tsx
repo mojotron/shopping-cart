@@ -6,7 +6,9 @@ type PropsType = {
 
 const PageSection = ({ children }: PropsType) => {
   return (
-    <section className="flex flex-col gap-8 max-w-[600px]">{children}</section>
+    <section className="flex flex-col gap-8 items-center max-w-[600px]">
+      {children}
+    </section>
   );
 };
 
