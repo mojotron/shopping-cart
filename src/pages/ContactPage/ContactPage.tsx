@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ChangeEvent, FormEvent, ReactElement, useState } from 'react';
 import {
   FaInstagram as IconIns,
   FaFacebook as IconFb,
@@ -10,7 +10,8 @@ import {
 import { IoMail as IconMail } from 'react-icons/io5';
 import PageSection from '../../ui/PageSection/PageSection';
 import Heading from '../../ui/Heading/Heading';
-import Paragraph from '../../ui/Paragraph/Paragraph';
+
+import SubmitButton from '../../ui/SubmitButton/SubmitButton';
 
 const ICON_SIZE = 20;
 
@@ -78,21 +79,68 @@ const GetInTouch = () => {
 };
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    question: '',
+  });
+  const handleChangeData = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+    setFormData((oldValue) => ({ ...oldValue, [name]: value }));
+  };
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setFormData({ name: '', email: '', question: '' });
+  };
+
   return (
-    <form>
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col text-neutral-800 flex items-center flex-col gap-4"
+    >
       <Heading level={3}>have a question?</Heading>
-      <label>
-        name
-        <input type="text" />
-      </label>
-      <label>
-        email
-        <input type="email" />
-      </label>
-      <label>
-        question
-        <textarea />
-      </label>
+      <div className="flex flex-col gap-2">
+        <label htmlFor="customer-name">Name</label>
+        <input
+          id="customer-name"
+          type="text"
+          name="name"
+          required
+          value={formData.name}
+          onChange={handleChangeData}
+          className=" border border-emerald-400 rounded-md py-1 px-2"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div className="flex flex-col gap-2">
+        <label htmlFor="customer-email">Email</label>
+        <input
+          id="customer-email"
+          type="email"
+          name="email"
+          required
+          value={formData.email}
+          onChange={handleChangeData}
+          className=" border border-emerald-400 rounded-md py-1 px-2"
+          placeholder="Enter your email"
+        />
+      </div>
+      <div className="flex flex-col gap-2">
+        <label htmlFor="customer-question">Question</label>
+        <textarea
+          id="customer-question"
+          name="question"
+          value={formData.question}
+          required
+          onChange={handleChangeData}
+          className=" border border-emerald-400 rounded-md py-1 px-2"
+          placeholder="Enter your question"
+        />
+      </div>
+      <SubmitButton>Submit</SubmitButton>
     </form>
   );
 };
