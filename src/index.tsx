@@ -11,6 +11,7 @@ import StorePage from './pages/StorePage/StorePage';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import { CartContextProvider } from './contexts/CartContext';
 import ContactPage from './pages/ContactPage/ContactPage';
+import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,8 @@ const router = createBrowserRouter([
       { path: '/', element: <HomePage /> },
       { path: '/about', element: <AboutPage /> },
       { path: '/store', element: <StorePage /> },
-      { path: '/cart', element: <p>Cart</p> },
       { path: '/contact', element: <ContactPage /> },
+      { path: '/checkout', element: <CheckoutPage /> },
     ],
   },
 ]);
