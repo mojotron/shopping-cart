@@ -1,8 +1,5 @@
 import { ChangeEvent, FormEvent, ReactElement, useState } from 'react';
 import {
-  FaInstagram as IconIns,
-  FaFacebook as IconFb,
-  FaXTwitter as IconX,
   FaPhone as IconPhone,
   FaClock as IconClock,
   FaLocationDot as IconLocation,
@@ -147,7 +144,7 @@ const ContactForm = () => {
 
 const ContactPage = () => {
   return (
-    <main className="flex flex-col items-center">
+    <main className="flex flex-col items-center py-16">
       <PageSection>
         <Heading level={1}>Contact</Heading>
         <div className="flex gap-8">

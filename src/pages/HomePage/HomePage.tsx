@@ -2,81 +2,38 @@ import { GiPathDistance, GiBeech, GiBootPrints } from 'react-icons/gi';
 import Slider from '../../ui/Slider/Slider';
 import testimonialData from '../../data/testimonials.json';
 import Testimonial from '../../components/Testimonial/Testimonial';
-import CheckLabel from '../../ui/CheckLabel/CheckLabel';
+import TextImageBlock from '../../components/TextImageBlock/TextImageBlock';
 import Heading from '../../ui/Heading/Heading';
 import Paragraph from '../../ui/Paragraph/Paragraph';
+import { TextImageBlockType } from '../../types/textImageBlockType';
 
-const TextSide = ({
-  title,
-  text,
-  bullets,
-}: {
-  title: string;
-  text: string;
-  bullets: string[];
-}) => {
-  return (
-    <div className="w-[50%] flex flex-col gap-2 ">
-      <h2 className="text-2xl font-bold text-emerald-600">{title}</h2>
-      <p className="text-sm text-neutral-600">{text}</p>
-      <ul className="flex flex-col gap-2">
-        {bullets.map((item) => (
-          <CheckLabel key={item} label={item} />
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-const ImageSide = ({
-  title,
-  imageUrl,
-}: {
-  title: string;
-  imageUrl: string;
-}) => {
-  return (
-    <div className="w-[50%] min-h-full flex items-center justify-center">
-      <div className="w-[200px] h-[200px] bg-neutral-300 rounded-full overflow-hidden">
-        <img
-          className="w-full h-full object-cover"
-          src={imageUrl}
-          alt={title}
-        />
-      </div>
-    </div>
-  );
-};
-
-const TextAndImage = ({
-  title,
-  text,
-  bullets,
-  imageUrl,
-  orientation = 'left',
-}: {
-  title: string;
-  text: string;
-  bullets: string[];
-  imageUrl: string;
-  orientation: 'left' | 'right';
-}) => {
-  return (
-    <section className="w-[600px] min-h-[100px] flex gap-1 py-8">
-      {orientation === 'left' ? (
-        <>
-          <TextSide title={title} text={text} bullets={bullets} />
-          <ImageSide imageUrl={imageUrl} title={title} />
-        </>
-      ) : (
-        <>
-          <ImageSide imageUrl={imageUrl} title={title} />
-          <TextSide title={title} text={text} bullets={bullets} />
-        </>
-      )}
-    </section>
-  );
-};
+const configTextImageBlocks: TextImageBlockType[] = [
+  {
+    title: 'Organic',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus debitis nostrum odit, totam delectus corporis? Impedit repudiandae dolorum architecto?',
+    bullets: ['pesticide-free', 'chemical-free', 'chemical-fertilizers-free'],
+    imageUrl: './images/maja-vujic-carrot.jpg',
+    orientation: 'left',
+  },
+  {
+    title: 'Fresh',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus debitis nostrum odit, totam delectus corporis? Impedit repudiandae dolorum architecto?',
+    bullets: [
+      'harvest before delivery',
+      'placed in wooden basket',
+      'delivered immediately',
+    ],
+    imageUrl: './images/hans-ripa-broccoli.jpg',
+    orientation: 'right',
+  },
+  {
+    title: 'Delivery',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus debitis nostrum odit, totam delectus corporis? Impedit repudiandae dolorum architecto?',
+    bullets: ['range of 20km', 'no extra charge', 'lighting fast'],
+    imageUrl: './images/annie-spratt-delivery.jpg',
+    orientation: 'left',
+  },
+];
 
 const HomePage = () => {
   return (
@@ -91,42 +48,11 @@ const HomePage = () => {
           repudiandae dolorum architecto?
         </Paragraph>
       </header>
+
       <section>
-        <TextAndImage
-          title="Organic"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-          doloribus debitis nostrum odit, totam delectus corporis? Impedit
-          repudiandae dolorum architecto?"
-          bullets={[
-            'pesticide-free',
-            'chemical-free',
-            'chemical-fertilizers-free',
-          ]}
-          imageUrl="./images/maja-vujic-carrot.jpg"
-          orientation="left"
-        />
-        <TextAndImage
-          title="Fresh"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-          doloribus debitis nostrum odit, totam delectus corporis? Impedit
-          repudiandae dolorum architecto?"
-          bullets={[
-            'harvest before delivery',
-            'placed in wooden basket',
-            'delivered immediately',
-          ]}
-          imageUrl="./images/hans-ripa-broccoli.jpg"
-          orientation="right"
-        />
-        <TextAndImage
-          title="Delivery"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-          doloribus debitis nostrum odit, totam delectus corporis? Impedit
-          repudiandae dolorum architecto?"
-          bullets={['range of 20km', 'no extra charge', 'lighting fast']}
-          imageUrl="./images/eric-prouzet-potato.jpg"
-          orientation="left"
-        />
+        {configTextImageBlocks.map((block) => (
+          <TextImageBlock key={block.title} data={block} />
+        ))}
       </section>
 
       <section className="bg-emerald-600 w-full pt-24 flex flex-col items-center">

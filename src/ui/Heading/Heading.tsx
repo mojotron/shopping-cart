@@ -14,24 +14,24 @@ const generalStyle = 'font-bold font-righteous capitalize';
 const getTextSize = (level: number) => {
   switch (level) {
     case 1:
-      return '5xl';
+      return 'text-5xl';
     case 2:
-      return '4xl';
+      return 'text-4xl';
     case 3:
-      return '3xl';
+      return 'text-3xl';
     case 4:
-      return '2xl';
+      return 'text-2xl';
     case 5:
-      return 'lg';
+      return 'text-lg';
     case 6:
-      return 'md';
+      return 'text-md';
     default:
-      return 'sm';
+      return 'text-sm';
   }
 };
 
 const Heading = ({ level = 1, children, color = 'primary' }: PropsType) => {
-  const style = `${generalStyle} text-${getTextSize(level)} ${HeadingColorEnum[color]}`;
+  const style = `${generalStyle} ${getTextSize(level)} ${HeadingColorEnum[color]}`;
 
   switch (level) {
     case 1:

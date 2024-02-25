@@ -43,7 +43,16 @@ const Cart = () => {
           </h2>
         </div>
         <div className="flex flex-col gap-1">
-          <Button onClick={() => {}}>Proceed to checkout</Button>
+          {cart.length > 0 && (
+            <Button
+              onClick={() => {
+                toggleCart();
+                navigate('/checkout');
+              }}
+            >
+              Proceed to checkout
+            </Button>
+          )}
           <Button
             onClick={() => {
               toggleCart();
