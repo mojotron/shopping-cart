@@ -1,22 +1,24 @@
-import { FormEvent, useState } from 'react';
-import {
-  FaCcVisa as IconVisa,
-  FaCcMastercard as IconMasterCard,
-  FaCcDinersClub as IconDinersClub,
-} from 'react-icons/fa6';
-import { SiAmericanexpress as IconAmex } from 'react-icons/si';
+import { ChangeEvent, FormEvent, useState } from 'react';
+
 import Heading from '../../../ui/Heading/Heading';
 import InputField from '../../../ui/InputField/InputField';
+import CardSelect, { CardOptionType } from './CardSelect';
+import SubmitButton from '../../../ui/SubmitButton/SubmitButton';
 
-const paymentOption = [
-  { name: 'visa', icon: <IconVisa /> },
-  { name: 'mastercard', icon: <IconMasterCard /> },
-  { name: 'american express', icon: <IconAmex /> },
-  { name: 'diners club', icon: <IconDinersClub /> },
-];
+type FormDataType = {
+  firstName: string;
+  lastName: string;
+  address: string;
+  cardOwner: string;
+  cardNumber: string;
+  card: CardOptionType;
+  expirationMonth: string;
+  expirationYear: string;
+  cvc: string;
+};
 
 const BillingDetails = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormDataType>({
     firstName: '',
     lastName: '',
     address: '',
@@ -25,7 +27,7 @@ const BillingDetails = () => {
     card: 'visa',
     expirationMonth: '',
     expirationYear: '',
-    cvv: '',
+    cvc: '',
   });
 
   const handleChangeData = (
@@ -47,12 +49,12 @@ const BillingDetails = () => {
       card: 'visa',
       expirationMonth: '',
       expirationYear: '',
-      cvv: '',
+      cvc: '',
     });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <Heading level={3}>Enter payment information</Heading>
       <Heading level={4}>Billing Information</Heading>
       <InputField
@@ -97,44 +99,39 @@ const BillingDetails = () => {
         onChange={handleChangeData}
       />
 
-      <InputField
-        id="billing-card-expiration-month"
-        label="expiration month"
-        name="expirationMonth"
-        placeholder="--"
-        value={formData.expirationMonth}
-        onChange={handleChangeData}
+      <div className="flex">
+        <InputField
+          id="billing-card-expiration-month"
+          label="expiration month"
+          name="expirationMonth"
+          placeholder="--"
+          value={formData.expirationMonth}
+          onChange={handleChangeData}
+        />
+        <InputField
+          id="billing-card-expiration-year"
+          label="expiration year"
+          name="expirationYear"
+          placeholder="--"
+          value={formData.expirationYear}
+          onChange={handleChangeData}
+        />
+        <InputField
+          id="billing-card-expiration-month"
+          label="cvc"
+          name="expirationMonth"
+          placeholder="---"
+          value={formData.cvc}
+          onChange={handleChangeData}
+        />
+      </div>
+
+      <CardSelect
+        selectedCard={formData.card}
+        onSelect={(card) => setFormData((oldValue) => ({ ...oldValue, card }))}
       />
-      <InputField
-        id="billing-card-expiration-year"
-        label="expiration year"
-        name="expirationYear"
-        placeholder="--"
-        value={formData.expirationYear}
-        onChange={handleChangeData}
-      />
-      <InputField
-        id="billing-card-expiration-month"
-        label="cvc"
-        name="expirationMonth"
-        placeholder="---"
-        value={formData.expirationMonth}
-        onChange={handleChangeData}
-      />
-      <select
-        value={formData.card}
-        onChange={(e) =>
-          setFormData((oldValue) => ({ ...oldValue, card: e.target.value }))
-        }
-        className="border border-emerald-400 px-4 py-1 rounded-md text-emerald-600 font-bold placeholder:text-neutral-400 outline-none focus:ring focus:ring-emerald-200 focus:ring-offset-0"
-      >
-        {paymentOption.map((opt) => (
-          <option key={opt.name}>{opt.name}</option>
-        ))}
-      </select>
-      <span>
-        {paymentOption.find((ele) => ele.name === formData.card)?.icon}
-      </span>
+
+      <SubmitButton>Complete Order</SubmitButton>
     </form>
   );
 };
