@@ -8,6 +8,7 @@ type PropsType = {
   name?: string;
   required?: boolean;
   value: string;
+
   onChange: (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;

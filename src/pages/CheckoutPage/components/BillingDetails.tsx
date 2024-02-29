@@ -1,9 +1,10 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import Heading from '../../../ui/Heading/Heading';
 import InputField from '../../../ui/InputField/InputField';
 import CardSelect, { CardOptionType } from './CardSelect';
 import SubmitButton from '../../../ui/SubmitButton/SubmitButton';
+import { useCart } from '../../../hooks/useCart';
 
 type FormDataType = {
   firstName: string;
@@ -18,6 +19,8 @@ type FormDataType = {
 };
 
 const BillingDetails = () => {
+  const { clearCart } = useCart();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<FormDataType>({
     firstName: '',
     lastName: '',
@@ -39,7 +42,9 @@ const BillingDetails = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    alert(JSON.stringify(formData));
+    alert(
+      'This will we refactoren when express is added, this is just cosmetic form!'
+    );
     setFormData({
       firstName: '',
       lastName: '',
@@ -51,10 +56,13 @@ const BillingDetails = () => {
       expirationYear: '',
       cvc: '',
     });
+    clearCart();
+    navigate('/');
   };
 
+  // TODO form validation
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[500px]">
       <Heading level={3}>Enter payment information</Heading>
       <Heading level={4}>Billing Information</Heading>
       <InputField
@@ -99,10 +107,10 @@ const BillingDetails = () => {
         onChange={handleChangeData}
       />
 
-      <div className="flex">
+      <div className="grid grid-cols-3 gap-6 w-full border">
         <InputField
           id="billing-card-expiration-month"
-          label="expiration month"
+          label="expiry month"
           name="expirationMonth"
           placeholder="--"
           value={formData.expirationMonth}
@@ -110,7 +118,7 @@ const BillingDetails = () => {
         />
         <InputField
           id="billing-card-expiration-year"
-          label="expiration year"
+          label="expiry year"
           name="expirationYear"
           placeholder="--"
           value={formData.expirationYear}
@@ -119,7 +127,7 @@ const BillingDetails = () => {
         <InputField
           id="billing-card-expiration-month"
           label="cvc"
-          name="expirationMonth"
+          name="cvc"
           placeholder="---"
           value={formData.cvc}
           onChange={handleChangeData}

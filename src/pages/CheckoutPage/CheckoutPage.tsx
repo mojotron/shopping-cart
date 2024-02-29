@@ -3,7 +3,7 @@ import OrderSummary from './components/OrderSummary';
 
 const CheckoutPage = () => {
   return (
-    <main className="flex flex-col items-center">
+    <main className="flex justify-center gap-10">
       <BillingDetails />
       <OrderSummary />
     </main>
