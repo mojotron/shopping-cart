@@ -1,17 +1,20 @@
+import { Link } from 'react-router-dom';
 import { GiBroccoli as IconLogo } from 'react-icons/gi';
+import Heading from '../../ui/Heading/Heading';
 
 const Logo = () => {
   return (
-    <div className="flex items-center gap-2 text-white">
-      <div className="border border-emerald-600 p-2 rounded-full">
-        <IconLogo size={35} className="text-emerald-600" />
+    <Link to="/" className="flex items-center gap-2" title="VEGE-to-TABLE">
+      <div className="border border-green-600 p-2 rounded-full">
+        <IconLogo size={35} className="text-green-600" />
       </div>
-      <div>
-        <h2 className="text-lg font-bold text-emerald-600 font-righteous ">
-          VEGE(to)TABLES
-        </h2>
+      <div className="invisible sm:visible">
+        <Heading level={4}>VEGE(to)TABLES</Heading>
+        <p className="text-sm font-bold text-gray-400">
+          Organic, Fresh, Healthy
+        </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,36 +1,6 @@
 import { ReactNode } from 'react';
-import {
-  FaPhone as IconPhone,
-  FaClock as IconClock,
-  FaLocationDot as IconLocation,
-} from 'react-icons/fa6';
-import { IoMail as IconMail } from 'react-icons/io5';
+import { CONTACT_CONFIG } from '../../constants/contacts';
 import Heading from '../../ui/Heading/Heading';
-
-const ICON_SIZE = 20;
-
-const contactConfig = [
-  {
-    label: 'address',
-    icon: <IconLocation size={ICON_SIZE} />,
-    text: 'Pumpkin Hill, Happyvile WD',
-  },
-  {
-    label: 'phone',
-    icon: <IconPhone size={ICON_SIZE} />,
-    text: '0010 200 3456',
-  },
-  {
-    label: 'email',
-    icon: <IconMail size={ICON_SIZE} />,
-    text: 'vage-to-table@example.com',
-  },
-  {
-    label: 'working hours',
-    icon: <IconClock size={ICON_SIZE} />,
-    text: 'Mon-Sat (08:00 - 18:00)',
-  },
-];
 
 const ContactItem = ({
   label,
@@ -59,7 +29,7 @@ const Contacts = () => {
     <div className="flex flex-col gap-5">
       <Heading level={3}>get in touch</Heading>
       <ul className="flex flex-col gap-3">
-        {contactConfig.map((ele) => (
+        {CONTACT_CONFIG.map((ele) => (
           <ContactItem
             key={ele.label}
             label={ele.label}

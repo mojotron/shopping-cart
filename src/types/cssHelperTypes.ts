@@ -1,6 +1,6 @@
 export enum HeadingColorEnum {
-  primary = 'text-emerald-600',
-  secondary = 'text-emerald-50',
+  primary = 'text-green-600',
+  secondary = 'text-green-50',
 }
 
 export type HeadingColorType = keyof typeof HeadingColorEnum;

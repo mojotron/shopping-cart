@@ -38,7 +38,7 @@ const configTextImageBlocks: TextImageBlockType[] = [
 const HomePage = () => {
   return (
     <div className="flex flex-col items-center gap-24">
-      <header className="max-w-[600px] text-center">
+      {/* <header className="max-w-[600px] text-center">
         <Heading level={1}>
           Get Fresh Vegetables From Ground Delivered to Your Table
         </Heading>
@@ -104,7 +104,7 @@ const HomePage = () => {
             />
           ))}
         />
-      </section>
+      </section> */}
     </div>
   );
 };

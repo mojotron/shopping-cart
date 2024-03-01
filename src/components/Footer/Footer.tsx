@@ -1,14 +1,7 @@
-import {
-  FaInstagram as IconIns,
-  FaFacebook as IconFb,
-  FaXTwitter as IconX,
-  FaPhone as IconPhone,
-  FaClock as IconClock,
-  FaLocationDot as IconLocation,
-} from 'react-icons/fa6';
-import { IoMail as IconMail } from 'react-icons/io5';
-
 import Logo from '../Logo/Logo';
+import Contacts from './Contacts';
+import Copyright from './Copyright';
+import SocialMedia from './SocialMedia';
 
 const Footer = () => {
   return (
@@ -19,15 +12,9 @@ const Footer = () => {
           Eat healthy form local, organic source. Order and we will deliver in
           one hour.
         </p>
-        <div>
-          <h3 className="font-bold mb-3">Follow us</h3>
-          <div className="flex gap-3">
-            <IconIns size={22} className="text-emerald-600" />
-            <IconFb size={22} className="text-emerald-600" />
-            <IconX size={22} className="text-emerald-600" />
-          </div>
-        </div>
       </section>
+
+      <SocialMedia />
 
       <section className="flex gap-6 text-sm">
         <div className="flex flex-col gap-2">
@@ -48,28 +35,9 @@ const Footer = () => {
           <p>Our Gardening Methods</p>
           <p>Our vision</p>
         </div>
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold mb-2">Contacts</h3>
-          <p className="flex gap-2 items-center">
-            <IconLocation size={15} className="text-emerald-600" /> Pumpkin
-            Hill, Happyvile WD
-          </p>
-          <p className="flex gap-2 items-center">
-            <IconPhone size={15} className="text-emerald-600" /> 00010 2000 3456
-          </p>
-          <p className="flex gap-2 items-center">
-            <IconMail size={15} className="text-emerald-600" />
-            vage-to-table@example.com
-          </p>
-          <p className="flex gap-2 items-center">
-            <IconClock size={15} className="text-emerald-600" />
-            Mon-Sat (08:00 - 18:00)
-          </p>
-        </div>
+        <Contacts />
       </section>
-      <p className="absolute bottom-5 font-bold">
-        &copy; {new Date().getFullYear()} Mojotron{' '}
-      </p>
+      <Copyright />
     </footer>
   );
 };
