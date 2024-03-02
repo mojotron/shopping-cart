@@ -17,7 +17,7 @@ const LinksBlock = ({ label, links }: PropsType) => {
       <ul className="space-y-2">
         {links.map((link) => (
           <li
-            className="cursor-pointer hover:text-green-600 text-sm"
+            className="cursor-pointer hover:text-green-600 text-sm text-gray-800"
             key={link.label}
           >
             <a href={link.path}>{link.label}</a>

@@ -11,7 +11,7 @@ type PropsType = {
 const SlideArrow = ({ orientation, onClick }: PropsType) => {
   return (
     <button
-      className={`absolute ${orientation}-0 bottom-10 text-neutral-400 hover:text-emerald-600`}
+      className={`absolute ${orientation}-0 bottom-10 text-gray-400 hover:text-green-600`}
       type="button"
       onClick={onClick}
     >

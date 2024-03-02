@@ -19,10 +19,10 @@ const router = createBrowserRouter([
     errorElement: <PageNotFound />,
     children: [
       { path: '/', element: <HomePage /> },
-      // { path: '/about', element: <AboutPage /> },
-      // { path: '/store', element: <StorePage /> },
-      // { path: '/contact', element: <ContactPage /> },
-      // { path: '/checkout', element: <CheckoutPage /> },
+      { path: '/about', element: <AboutPage /> },
+      { path: '/store', element: <StorePage /> },
+      { path: '/contact', element: <ContactPage /> },
+      { path: '/checkout', element: <CheckoutPage /> },
     ],
   },
 ]);

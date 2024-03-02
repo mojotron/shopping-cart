@@ -14,19 +14,19 @@ const generalStyle = 'font-bold font-righteous capitalize';
 const getTextSize = (level: number) => {
   switch (level) {
     case 1:
-      return 'text-5xl';
+      return 'text-3xl sm:text-4xl md:text-5xl';
     case 2:
-      return 'text-4xl';
+      return 'text-2xl sm:text-3xl md:text-4xl';
     case 3:
-      return 'text-3xl';
+      return 'text-xl sm:text-2xl md:text-3xl';
     case 4:
-      return 'text-2xl';
+      return 'text-md sm:text-xl md:text-2xl';
     case 5:
-      return 'text-lg';
+      return 'text-sm sm:text-md md:text-xl';
     case 6:
-      return 'text-md';
+      return 'text-xs sm:text-sm md:text-md';
     default:
-      return 'text-sm';
+      return 'text-xs';
   }
 };
 

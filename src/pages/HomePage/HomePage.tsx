@@ -38,7 +38,7 @@ const configTextImageBlocks: TextImageBlockType[] = [
 const HomePage = () => {
   return (
     <div className="flex flex-col items-center gap-24">
-      {/* <header className="max-w-[600px] text-center">
+      <header className="max-w-[600px] text-center">
         <Heading level={1}>
           Get Fresh Vegetables From Ground Delivered to Your Table
         </Heading>
@@ -56,7 +56,7 @@ const HomePage = () => {
       </section>
 
       <section className="bg-emerald-600 w-full pt-24 flex flex-col items-center">
-        <header className="text-center w-[600px]">
+        <header className="text-center">
           <Heading level={2} color="secondary">
             We Will Deliver Only The Best Vegetables
           </Heading>
@@ -93,18 +93,16 @@ const HomePage = () => {
         </main>
       </section>
 
-      <section className="w-[600px] h-[300px]">
-        <Slider
-          slides={testimonialData.map((t) => (
-            <Testimonial
-              key={t.id}
-              imageUrl={t.imageUrl}
-              text={t.text}
-              userName={t.name}
-            />
-          ))}
-        />
-      </section> */}
+      <Slider
+        slides={testimonialData.map((t) => (
+          <Testimonial
+            key={t.id}
+            imageUrl={t.imageUrl}
+            text={t.text}
+            userName={t.name}
+          />
+        ))}
+      />
     </div>
   );
 };

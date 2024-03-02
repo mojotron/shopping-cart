@@ -15,8 +15,8 @@ const Dots = ({ length, index, onSelectIndex }: PropsType) => {
         <span
           key={i}
           onClick={() => onSelectIndex(i)}
-          className={`inline-block w-3 h-3 
-      ${i === index ? 'bg-emerald-600' : 'bg-neutral-400'}
+          className={`inline-block size-2 sm:size-3 
+      ${i === index ? 'bg-green-600' : 'bg-gray-400'}
        rounded-full`}
         ></span>
       ))}

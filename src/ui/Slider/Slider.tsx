@@ -1,4 +1,4 @@
-import React, { ReactElement, useCallback, useEffect, useState } from 'react';
+import { ReactElement, useCallback, useEffect, useState } from 'react';
 import Dots from './Dots';
 import SlideArrow from './SlideArrow';
 
@@ -42,7 +42,7 @@ const Slider = ({ slides }: PropsType) => {
   }, [handleGoLeft, handleGoRight]);
 
   return (
-    <div className="relative last:w-full h-full py-8 px-10 flex flex-col">
+    <div className="relative s-full max-w-[600px] py-8 px-10 flex flex-col">
       <div className="px-4">{slides[currentIndex]}</div>
 
       {!firstSlide && <SlideArrow orientation="left" onClick={handleGoLeft} />}

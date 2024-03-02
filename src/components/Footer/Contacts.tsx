@@ -7,7 +7,10 @@ const Contacts = () => {
       <Heading level={5}>Contacts</Heading>
       <ul className="space-y-3">
         {CONTACT_CONFIG.map((contact) => (
-          <p key={contact.label} className="flex gap-2 items-center text-sm">
+          <p
+            key={contact.label}
+            className="flex gap-2 items-center text-sm text-gray-800"
+          >
             <span className="text-green-600">{contact.icon}</span>{' '}
             <span>{contact.text}</span>
           </p>
