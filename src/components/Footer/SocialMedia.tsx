@@ -18,7 +18,7 @@ const SocialMedia = () => {
       <ul className="flex gap-3">
         {socialMediaConfig.map((media) => (
           <li className="cursor-pointer" key={media.label}>
-            <span className="text-green-600 hover:text-orange-400">
+            <span className="text-gray-600 hover:text-orange-400">
               {media.icon}
             </span>
           </li>

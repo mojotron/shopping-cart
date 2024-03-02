@@ -14,6 +14,7 @@ module.exports = {
       },
       gray: {
         50: '#fafafa',
+        200: '#e5e5e5',
         400: '#a3a3a3',
         600: '#525252',
         800: '#262626',
@@ -24,6 +25,7 @@ module.exports = {
       },
     },
     fontSize: {
+      xs: '12px',
       sm: '14px',
       base: '16px',
       lg: '18px',
