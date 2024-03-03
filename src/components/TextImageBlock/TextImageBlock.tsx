@@ -9,7 +9,7 @@ type PropsType = {
 
 const TextImageBlock = ({ data }: PropsType) => {
   return (
-    <section className="w-[600px] min-h-[100px] flex gap-1 py-8">
+    <section className="flex flex-col items-center sm:flex-row gap-5 p-8 w-full max-w-[500px] bg-green-100 rounded-md">
       {data.orientation === 'left' ? (
         <>
           <TextSide

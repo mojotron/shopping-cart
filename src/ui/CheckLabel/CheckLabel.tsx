@@ -8,7 +8,7 @@ type PropsType = {
 const CheckLabel = ({ label, color = 'primary' }: PropsType) => {
   return (
     <li
-      className={`flex gap-2 items-center ${color === 'primary' ? 'text-emerald-600' : 'text-emerald-50'} font-bold`}
+      className={`text-sm sm:text-base flex gap-2 items-center ${color === 'primary' ? 'text-green-600' : 'text-green-100'} font-bold`}
     >
       <IconCheck size={18} /> <span>{label}</span>
     </li>

@@ -13,7 +13,7 @@ const Testimonial = ({ imageUrl, text, userName }: PropsType) => {
   return (
     <article>
       <div className="flex gap-2 rounded-md">
-        <p className="flex flex-col text-md sm:text-lg text-neutral-600">
+        <p className="flex flex-col text-md sm:text-lg text-gray-600">
           <IconQuoteLeft className="font-bold text-3xl text-green-600" />
           {text}
           <IconQuoteRight className="font-bold text-3xl ml-auto text-green-600" />

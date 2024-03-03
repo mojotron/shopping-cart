@@ -3,30 +3,30 @@
     "id": 1,
     "imageUrl": "https://i.pravatar.cc/150?img=23",
     "name": "Lara Thompson",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,ipsum!"
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ipsum!"
   },
   {
     "id": 2,
     "imageUrl": "https://i.pravatar.cc/150?img=27",
     "name": "Martina Miller",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,ipsum!"
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ipsum!"
   },
   {
     "id": 3,
     "imageUrl": "https://i.pravatar.cc/150?img=11",
     "name": "Mark Heeler",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,ipsum!"
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ipsum!"
   },
   {
     "id": 4,
     "imageUrl": "https://i.pravatar.cc/150?img=14",
     "name": "David R. Morison",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,ipsum!"
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ipsum!"
   },
   {
     "id": 5,
     "imageUrl": "https://i.pravatar.cc/150?img=24",
     "name": "Patricia Heart",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,ipsum!"
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ipsum!"
   }
 ]

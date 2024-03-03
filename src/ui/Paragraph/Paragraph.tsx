@@ -19,7 +19,7 @@ const Paragraph = ({
 }: PropsType) => {
   return (
     <p
-      className={`${ParagraphColorEnum[color]} ${ParagraphSizeEnum[size]} text-justify`}
+      className={`${ParagraphColorEnum[color]} ${ParagraphSizeEnum[size]} text-center`}
     >
       {children}
     </p>
