@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { CONTACT_CONFIG } from '../../constants/contacts';
-import Heading from '../../ui/Heading/Heading';
+import { CONTACT_CONFIG } from '../../../constants/contacts';
+import Heading from '../../../ui/Heading/Heading';
 
 const ContactItem = ({
   label,
@@ -13,12 +13,12 @@ const ContactItem = ({
 }) => {
   return (
     <li className="flex gap-2 items-center">
-      <div className="border border-emerald-600 p-2 rounded-full text-emerald-600">
+      <div className="border border-green-600 p-2 rounded-full text-green-600">
         {icon}
       </div>
       <div>
         <Heading level={5}>{label}</Heading>
-        <p>{text}</p>
+        <p className="text-gray-600">{text}</p>
       </div>
     </li>
   );

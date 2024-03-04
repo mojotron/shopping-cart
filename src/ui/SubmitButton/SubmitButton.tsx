@@ -10,7 +10,7 @@ const SubmitButton = ({ children, disabled = false }: PropsType) => {
     <button
       disabled={disabled}
       type="submit"
-      className="rounded-md font-bold text-white px-2 py-1 disabled:bg-gray-300 disabled:text-gray-100 bg-emerald-600"
+      className="rounded-md font-bold text-gray-50 px-4 py-2 disabled:bg-gray-400 disabled:text-gray-100 bg-green-600 hover:bg-orange-400"
     >
       {children}
     </button>

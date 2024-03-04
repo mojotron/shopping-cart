@@ -1,7 +1,7 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
-import InputField from '../../ui/InputField/InputField';
-import SubmitButton from '../../ui/SubmitButton/SubmitButton';
-import Heading from '../../ui/Heading/Heading';
+import InputField from '../../../ui/InputField/InputField';
+import SubmitButton from '../../../ui/SubmitButton/SubmitButton';
+import Heading from '../../../ui/Heading/Heading';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +25,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <Heading level={3}>Have a Question?</Heading>
       <InputField
         id="customer-name"

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import Button from '../../ui/Button/Button';
 import Heading from '../../ui/Heading/Heading';
-import PageSection from '../../ui/PageSection/PageSection';
+
 import Paragraph from '../../ui/Paragraph/Paragraph';
 import Banner from './components/Banner';
 import VisionSection from './components/VisionSection';
@@ -28,17 +28,15 @@ const AboutPage = () => {
       <VisionSection />
       <CareerSection />
 
-      <PageSection>
-        <div className="bg-emerald-600 rounded-md p-16 flex flex-col items-center justify-center gap-8">
-          <Heading level={3}>
-            We grow organic healthy vegetables for you. So you can have one
-            stress less in your life.
-          </Heading>
-          <Button type="remove" onClick={() => navigate('/store')}>
-            Go To Store
-          </Button>
-        </div>
-      </PageSection>
+      <div className="bg-emerald-600 rounded-md p-16 flex flex-col items-center justify-center gap-8">
+        <Heading level={3}>
+          We grow organic healthy vegetables for you. So you can have one stress
+          less in your life.
+        </Heading>
+        <Button type="remove" onClick={() => navigate('/store')}>
+          Go To Store
+        </Button>
+      </div>
     </main>
   );
 };

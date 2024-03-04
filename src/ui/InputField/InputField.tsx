@@ -29,7 +29,7 @@ const InputField = ({
   if (type === 'text' || type === 'email') {
     inputMarkdown = (
       <input
-        className="border border-emerald-400 px-4 py-1 rounded-md text-emerald-600 font-bold placeholder:text-neutral-400 outline-none focus:ring focus:ring-emerald-200 focus:ring-offset-0"
+        className="border border-green-400 px-4 py-1 rounded-md text-gray-600 font-bold placeholder:text-gray-400 outline-none focus:ring focus:ring-green-400 focus:ring-offset-0"
         id={id}
         placeholder={placeholder}
         required={required}
@@ -42,7 +42,7 @@ const InputField = ({
   } else if (type === 'textarea') {
     inputMarkdown = (
       <textarea
-        className="border border-emerald-400 px-4 py-1 rounded-md text-emerald-600 font-bold placeholder:text-neutral-400 outline-none focus:ring focus:ring-emerald-200 focus:ring-offset-0"
+        className="border border-green-400 px-4 py-1 rounded-md text-gray-600 font-bold placeholder:text-gray-400 outline-none focus:ring focus:ring-green-400 focus:ring-offset-0"
         id={id}
         placeholder={placeholder}
         required={required}
@@ -55,7 +55,7 @@ const InputField = ({
 
   return (
     <div className="flex flex-col gap-2">
-      <label className="font-righteous font-bold text-emerald-600" htmlFor={id}>
+      <label className="font-righteous font-bold text-gray-600" htmlFor={id}>
         {label}
       </label>
       {inputMarkdown}

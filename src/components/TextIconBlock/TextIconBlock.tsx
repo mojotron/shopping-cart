@@ -9,7 +9,7 @@ type PropsType = {
 
 const TextIconBlock = ({ data }: PropsType) => {
   return (
-    <div className="w-full p-8 flex flex-col items-start gap-5 bg-green-600 rounded-md ">
+    <div className="w-full md:w-[600px] p-8 flex flex-col items-start gap-5 bg-green-600 rounded-md ">
       <Heading level={3} color="secondary">
         {data.title}
       </Heading>
