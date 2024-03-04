@@ -11,15 +11,15 @@ type PropsType = {
 
 const getBtnTypeColors = (type: BtnType) => {
   if (type === 'remove') {
-    return 'bg-red-400 rounded-md';
+    return 'bg-orange-600 rounded-md hover:bg-orange-400';
   }
   if (type === 'increment') {
-    return 'bg-emerald-400 rounded-full w-8 h-8 ';
+    return 'bg-green-400 rounded-full size-8';
   }
   if (type === 'none') {
     return '';
   }
-  return 'bg-emerald-600 rounded-md';
+  return 'bg-green-600 rounded-md hover:bg-green-400';
 };
 
 const Button = ({
@@ -33,7 +33,7 @@ const Button = ({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`font-bold text-white px-2 py-1 disabled:bg-gray-300 disabled:text-gray-100 ${getBtnTypeColors(type)}`}
+      className={`border border-gray-50 font-bold text-gray-50 px-4 py-2 disabled:bg-gray-400 disabled:text-gray-50 ${getBtnTypeColors(type)}`}
     >
       {children}
     </button>

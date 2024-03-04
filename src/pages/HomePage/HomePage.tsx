@@ -6,7 +6,8 @@ import Heading from '../../ui/Heading/Heading';
 import Paragraph from '../../ui/Paragraph/Paragraph';
 
 import InfoSection from './InfoSection';
-import TextImageBlockSection from './TextImageBlockSection';
+import TextImageBlockSection from '../../components/TextImageBlockSection/TextImageBlockSection';
+import { TEXT_IMAGE_BLOCKS_HOMEPAGE } from '../../constants/textImageBlocks';
 
 const HomePage = () => {
   return (
@@ -22,7 +23,7 @@ const HomePage = () => {
         </Paragraph>
       </header>
 
-      <TextImageBlockSection />
+      <TextImageBlockSection items={TEXT_IMAGE_BLOCKS_HOMEPAGE} />
 
       <InfoSection />
 

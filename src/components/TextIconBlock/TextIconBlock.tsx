@@ -9,12 +9,12 @@ type PropsType = {
 
 const TextIconBlock = ({ data }: PropsType) => {
   return (
-    <div className="w-full p-8 flex flex-col items-start gap-5 bg-emerald-600 rounded-md">
+    <div className="w-full p-8 flex flex-col items-start gap-5 bg-green-600 rounded-md ">
       <Heading level={3} color="secondary">
         {data.title}
       </Heading>
-      <div className="flex items-center gap-4">
-        <div className="border border-emerald-600 rounded-full p-4 text-emerald-600 bg-emerald-50">
+      <div className="flex flex-col items-center gap-4 sm:flex-row">
+        <div className="border border-green-600 rounded-full p-4 text-orange-400 bg-gray-50">
           {data.icon}
         </div>
         <Paragraph size="medium" color="secondary">

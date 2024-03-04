@@ -1,9 +1,15 @@
 const Banner = () => {
   return (
-    <div className="max-w-[600px] text-center font-lg font-bold text-emerald-800 border-y-2 border-emerald-400 flex items-center justify-center gap-5 p-5 capitalize">
-      <p className="w-[150px]">over 20 years of gardening</p>
-      <p className="w-[150px]">web Store 3 years</p>
-      <p className="w-[150px]">hundreds happy customers</p>
+    <div className="grid grid-cols-3 gap-3 font-bold text-gray-800 border-t border-b py-8 border-gray-400 text-sm sm:text-base">
+      <p className="">
+        over <span className="text-green-600">20 years</span> of gardening
+      </p>
+      <p className="">
+        <span className="text-green-600">web store</span> for 3 years
+      </p>
+      <p className="">
+        hundreds <span className="text-green-600">happy</span> customers
+      </p>
     </div>
   );
 };
