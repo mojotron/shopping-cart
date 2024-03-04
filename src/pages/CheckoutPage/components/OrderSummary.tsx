@@ -7,11 +7,11 @@ const OrderSummary = () => {
   return (
     <section>
       <Heading level={3}>Order Summary</Heading>
-      <ul className="flex flex-col gap-3 mt-4">
+      <ul className="my-4 space-y-4">
         {cart.map((item) => (
           <li
             key={item.id}
-            className="flex items-center gap-3 font-bold text-neutral-600"
+            className="flex items-center gap-3 font-bold text-gray-600"
           >
             <img
               src={item.imageUrl}

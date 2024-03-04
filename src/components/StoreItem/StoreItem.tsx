@@ -25,18 +25,18 @@ const StoreItem = ({ item }: PropsType) => {
   const itemInCart = cart.find((cartItem) => cartItem.id === item.id);
 
   return (
-    <article className="relative rounded-md w-[300px] sm:w-[450px] h-[400px] flex items-center justify-between gap-2 m-2 border border-emerald-100">
-      <div className="w-[40%] h-[100%] flex items-center justify-center">
+    <article className="relative rounded-md w-[300px] h-[500px] sm:w-[500px] sm:h-[450px] flex flex-col sm:flex-row items-center justify-between gap-2 m-2 border border-gray-200">
+      <div className="w-full h-[25%] sm:w-[40%] sm:h-[100%] flex items-center justify-center">
         <img
-          className="relative right-5 object-cover w-[100%] h-[90%] border-4 border-emerald-200 shadow-[0_5px_25px_10px_rgba(0,0,0,0.3)] overflow-hidden"
+          className="relative right-0 sm:right-5 object-cover w-[100%] h-[90%] border-4 border-gray-200 shadow-[0_5px_25px_10px_rgba(0,0,0,0.3)] overflow-hidden"
           src={item.imageUrl}
           alt={item.name}
         />
       </div>
 
-      <section className="relative bg-emerald-100 px-4 p-8 w-[60%] h-[100%] flex flex-col gap-2">
+      <section className="relative bg-emerald-100 px-8 sm:pt-4 w-full sm:w-[60%] h-[100%] flex flex-col gap-2">
         {showDescription && (
-          <p className="absolute top-16 bg-gray-50 p-4 z-20 text-gray-600 border border-green-400 rounded-md">
+          <p className="absolute top-8 sm:top-16 bg-gray-50 p-4 z-20 text-gray-600 border border-green-400 rounded-md">
             {item.description}
           </p>
         )}
@@ -51,7 +51,7 @@ const StoreItem = ({ item }: PropsType) => {
         </header>
         <LabelList labels={item.nutrition.labels} />
         <NutritionList data={item.nutrition} />
-        <footer className="flex items-end gap-5 absolute bottom-8">
+        <footer className="flex items-end justify-between gap-5 absolute bottom-8">
           <PriceTag price={item.price} unit={`€/${item.sellingUnit}`} />
           {!itemInCart && (
             <Button

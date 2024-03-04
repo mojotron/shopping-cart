@@ -10,7 +10,7 @@ const navConfig = [
 const Navigation = () => {
   return (
     <nav>
-      <ul className="flex gap-3 font-righteous text-green-600 text-lg">
+      <ul className="flex gap-3 font-righteous text-green-600 text-md sm:text-lg">
         {navConfig.map((ele) => (
           <li key={ele.path}>
             <NavLink

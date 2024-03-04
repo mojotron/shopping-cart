@@ -62,7 +62,7 @@ const BillingDetails = () => {
 
   // TODO form validation
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[500px]">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-[500px]">
       <Heading level={3}>Enter payment information</Heading>
       <Heading level={4}>Billing Information</Heading>
       <InputField
@@ -107,7 +107,7 @@ const BillingDetails = () => {
         onChange={handleChangeData}
       />
 
-      <div className="grid grid-cols-3 gap-6 w-full border">
+      <div className="grid grid-cols-3 gap-6 w-full border items-end">
         <InputField
           id="billing-card-expiration-month"
           label="expiry month"
