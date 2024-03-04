@@ -33,7 +33,7 @@ const Button = ({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`border border-gray-50 font-bold text-gray-50 px-4 py-2 disabled:bg-gray-400 disabled:text-gray-50 ${getBtnTypeColors(type)}`}
+      className={`border border-gray-50 font-bold text-sm px-2 py-1 text-gray-50  disabled:bg-gray-400 disabled:text-gray-50 ${getBtnTypeColors(type)}`}
     >
       {children}
     </button>
