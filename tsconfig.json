@@ -19,7 +19,7 @@
   "include": [
     "src",
     ".eslintrc.json",
-    "vite.config.ts",
+    "vite.config.mts",
     "tailwind.config.js",
     "postcss.config.cjs"
   ],
