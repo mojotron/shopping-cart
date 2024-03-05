@@ -39,6 +39,7 @@ module.exports = {
       '5xl': '48px',
     },
     fontFamily: {
+      sans: ['Raleway', 'sans'],
       righteous: ['Righteous', 'sans'],
     },
     extend: {},

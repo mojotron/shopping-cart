@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
+// context
+import { CartContextProvider } from './contexts/CartContext';
 // layouts
 import AppLayout from './layouts/AppLayout/AppLayout';
 // pages
@@ -9,7 +11,6 @@ import HomePage from './pages/HomePage/HomePage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import StorePage from './pages/StorePage/StorePage';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
-import { CartContextProvider } from './contexts/CartContext';
 import ContactPage from './pages/ContactPage/ContactPage';
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
 
