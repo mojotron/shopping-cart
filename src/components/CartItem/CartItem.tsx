@@ -20,7 +20,7 @@ const CartItem = ({ item }: { item: CartItemType }) => {
           <p>unit price {item.price.toFixed(2)} €</p>
         </div>
       </div>
-      <div className="ml-auto flex flex-col justify-center items-center gap-1 font-bold text-neutral-600">
+      <div className="ml-auto flex flex-col justify-center items-center gap-1 font-bold text-gray-600">
         <p className="text-xl">{totalPrice.toFixed(2)} €</p>
         <ItemQuantityControl item={item} />
       </div>

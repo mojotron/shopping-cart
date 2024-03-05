@@ -22,7 +22,7 @@ const ItemQuantityControl = ({ item }: PropsType) => {
           -
         </Button>
 
-        <span className="w-6 text-center font-bold font-righteous text-emerald-600">
+        <span className="w-6 text-center font-bold font-righteous text-green-600">
           {item.quantity}
         </span>
 
