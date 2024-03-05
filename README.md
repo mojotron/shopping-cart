@@ -2,7 +2,7 @@
 
 This project is part of The [Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart) curriculum. Goal of this project is to continue learning about React library. The main goal of this project is to use react function components and hooks, react-router-dom as well as a writing test.
 
-[Live preview current version](https://mojotron-shopping-cart.netlify.app/) of this project (April, 2024), hosted by Github Pages.
+[Live preview current version](https://mojotron.github.io/shopping-cart/) of this project (April, 2024), hosted by Github Pages.
 
 [Live preview version 1](https://mojotron-shopping-cart.netlify.app/) of this project (May, 2022), hosted by Netlify.
 

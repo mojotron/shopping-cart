@@ -6,7 +6,7 @@
     "price": 2.25,
     "sellingUnit": "kg",
     "available": true,
-    "imageUrl": "./images/kiona-kale.jpg",
+    "imageUrl": "https://github.com/mojotron/shopping-cart/tree/main/public/images/kiona-kale.jpg",
     "nutrition": {
       "measure": "1 cup (20g)",
       "description": "Kale provides great nutritional benefits, like vitamin A and vitamin C, for very few calories",
@@ -30,7 +30,7 @@
     "price": 1.5,
     "sellingUnit": "kg",
     "available": true,
-    "imageUrl": "./images/david-holifield-carrot.jpg",
+    "imageUrl": "https://github.com/mojotron/shopping-cart/tree/main/public/images/david-holifield-carrot.jpg",
     "nutrition": {
       "measure": "1 medium carrot (61g)",
       "description": "Thirty grams of carrots provides you entire daily requrement of vitamin A",
@@ -49,7 +49,7 @@
     "price": 2.5,
     "sellingUnit": "kg",
     "available": true,
-    "imageUrl": "./images/josephine-baran-tomato.jpg",
+    "imageUrl": "https://github.com/mojotron/shopping-cart/tree/main/public/images/josephine-baran-tomato.jpg",
     "nutrition": {
       "measure": "1 small (91g)",
       "description": "Tomatoes are an excellent source of nutrients like vitamin C and vitamin A",
@@ -68,7 +68,7 @@
     "price": 3.1,
     "sellingUnit": "kg",
     "available": false,
-    "imageUrl": "./images/harshal-s-hirve-cucumber.jpg",
+    "imageUrl": "https://github.com/mojotron/shopping-cart/tree/main/public/images/harshal-s-hirve-cucumber.jpg",
     "nutrition": {
       "measure": "1/2 cup, sliced (52g)",
       "description": "Cucumbers are good source of vitamin K, which may helo with blood clot preventing",
@@ -93,7 +93,7 @@
     "price": 0.1,
     "sellingUnit": "clove",
     "available": true,
-    "imageUrl": "./images/bryam-blanco-garlic.jpg",
+    "imageUrl": "https://github.com/mojotron/shopping-cart/tree/main/public/images/bryam-blanco-garlic.jpg",
     "nutrition": {
       "measure": "1 clove (3g)",
       "description": "Garlic may have immunity-enhancing and potential antioxidative benefits",
@@ -118,7 +118,7 @@
     "price": 1.25,
     "sellingUnit": "kg",
     "available": true,
-    "imageUrl": "./images/eric-prouzet-potato.jpg",
+    "imageUrl": "https://github.com/mojotron/shopping-cart/tree/main/public/images/eric-prouzet-potato.jpg",
     "nutrition": {
       "measure": "1 medium (173g)",
       "description": "Potatoes are a good source of vitamin C, vitamin B6, and potassium",
@@ -142,7 +142,7 @@
     "price": 3,
     "sellingUnit": "kg",
     "available": false,
-    "imageUrl": "./images/onder-ortel-broccoli.jpg",
+    "imageUrl": "https://github.com/mojotron/shopping-cart/tree/main/public/images/onder-ortel-broccoli.jpg",
     "nutrition": {
       "measure": "1 medium (173g)",
       "description": "Broccoli is an excellent, heart-healthy choice; more then one-third of its carbohydrates come from fiber",
