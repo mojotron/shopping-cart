@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import './index.css';
 // context
 import { CartContextProvider } from './contexts/CartContext';
@@ -14,12 +14,13 @@ import PageNotFound from './pages/PageNotFound/PageNotFound';
 import ContactPage from './pages/ContactPage/ContactPage';
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
+    path: '/',
     element: <AppLayout />,
     errorElement: <PageNotFound />,
     children: [
-      { path: '/', element: <HomePage /> },
+      { index: true, element: <HomePage /> },
       { path: '/about', element: <AboutPage /> },
       { path: '/store', element: <StorePage /> },
       { path: '/contact', element: <ContactPage /> },

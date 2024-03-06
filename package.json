@@ -1,5 +1,4 @@
 {
-  "homepage": "https://mojotron.github.io/shopping-cart/",
   "name": "shopping-cart",
   "version": "2.0.0",
   "private": true,
@@ -20,10 +19,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build --base=./",
     "serve": "vite preview",
     "test": "vitest",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build --base=./",
     "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
